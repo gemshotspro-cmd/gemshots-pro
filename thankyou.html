@@ -3,16 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact GemShots Pro – Professional Gem Photography Sri Lanka</title>
+    <title>Thank You – GemShots Pro</title>
     <meta
       name="description"
-      content="Get in touch with GemShots Pro for expert gem photography, video, 360° reels, and digital services for Ceylon gemstones. WhatsApp or email us today."
+      content="Your message has been received. We'll get back to you soon about your gem photography needs."
     />
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Custom Tailwind config -->
+    <!-- Custom Tailwind config (same as your main site) -->
     <script>
       tailwind.config = {
         theme: {
@@ -20,6 +20,7 @@
             fontFamily: {
               sans: ["Inter", "system-ui", "sans-serif"],
               display: ["PP Mori", "sans-serif"],
+              mont: ["Montserrat", "sans-serif"],
             },
             colors: {
               dark: { DEFAULT: "#0a0a0a", light: "#1a1a1a" },
@@ -46,19 +47,24 @@
       };
     </script>
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts (same as main site) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- Custom CSS (create this file or inline important parts) -->
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
-  <body class="bg-dark text-grey-light antialiased">
-    <!-- Header / Navigation -->
+
+  <body class="bg-dark text-grey-light antialiased min-h-screen flex flex-col">
+    <!-- Header (same as main site) -->
     <header
       class="fixed top-0 left-0 right-0 z-50 bg-dark/90 backdrop-blur-md border-b border-border"
     >
@@ -66,12 +72,12 @@
         <div class="flex items-center justify-between h-20">
           <a
             href="/"
-            class="text-xl lg:text-2xl font-display font-medium tracking-wide text-accent"
+            class="text-xl lg:text-2xl font-mont tracking-widest flex items-baseline gap-2"
           >
-            GEMSHOTS PRO
+            <span class="font-bold text-white">GEMSHOTS</span>
+            <span class="font-light text-accent">PRO</span>
           </a>
 
-          <!-- Desktop Nav -->
           <nav class="hidden md:flex items-center space-x-12">
             <a
               href="/#services"
@@ -93,15 +99,13 @@
               class="text-sm tracking-wide hover:text-accent transition-colors"
               >Pricing</a
             >
-            <!-- <a href="/booking.html" class="text-sm tracking-wide hover:text-accent transition-colors">Book Session</a> -->
             <a
-              href="/contact.html"
-              class="text-sm tracking-wide text-accent font-medium"
+              href="/contact"
+              class="text-sm tracking-wide hover:text-accent transition-colors"
               >Contact</a
             >
           </nav>
 
-          <!-- Hamburger -->
           <button
             id="hamburger"
             class="md:hidden flex flex-col justify-between w-6 h-5"
@@ -122,7 +126,7 @@
       </div>
     </header>
 
-    <!-- Mobile Menu -->
+    <!-- Mobile Menu (same as main) -->
     <div
       id="mobile-menu"
       class="fixed inset-0 bg-dark z-40 transform translate-x-full transition-transform duration-500 ease-in-out md:hidden flex items-center justify-center pt-48"
@@ -142,163 +146,83 @@
         <a href="/#pricing" class="hover:text-accent transition-colors"
           >Pricing</a
         >
-        <!-- <a href="/booking.html" class="hover:text-accent transition-colors">Book Session</a> -->
-        <a href="/contact.html" class="text-accent">Contact</a>
+        <a href="/contact" class="hover:text-accent transition-colors"
+          >Contact</a
+        >
       </nav>
     </div>
 
     <!-- Main Content -->
-    <main class="pt-24 md:pt-28 lg:pt-32 pb-20">
-      <section class="py-20 md:py-32">
-        <div class="container mx-auto px-6 lg:px-12 max-w-5xl">
-          <div class="text-center mb-16">
-            <p class="text-sm tracking-wide text-grey uppercase mb-6">
-              GET IN TOUCH
-            </p>
-            <h1
-              class="font-display text-5xl md:text-6xl lg:text-7xl font-light text-white leading-tight"
-            >
-              Let's Create Something <span class="text-accent">Brilliant</span>
-            </h1>
-          </div>
-
-          <div class="grid md:grid-cols-2 gap-12 lg:gap-16">
-            <!-- Contact Form -->
-            <div>
-              <form
-                name="contact"
-                method="POST"
-                data-netlify="true"
-                netlify-honeypot="bot-field"
-                action="/thankyou.html"
-                class="space-y-7"
-              >
-                <input type="hidden" name="form-name" value="contact" />
-
-                <p hidden>
-                  <label
-                    >Don’t fill this out if you’re human:
-                    <input name="bot-field"
-                  /></label>
-                </p>
-
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Your Name"
-                  required
-                  class="w-full bg-dark-light border border-border px-6 py-4 text-base text-grey-light focus:border-accent outline-none transition-colors rounded"
-                />
-
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Your Email"
-                  required
-                  class="w-full bg-dark-light border border-border px-6 py-4 text-base text-grey-light focus:border-accent outline-none transition-colors rounded"
-                />
-
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Your Phone / WhatsApp"
-                  required
-                  class="w-full bg-dark-light border border-border px-6 py-4 text-base text-grey-light focus:border-accent outline-none transition-colors rounded"
-                />
-
-                <textarea
-                  name="message"
-                  rows="7"
-                  placeholder="Tell us about your project, gems, timeline, or any questions..."
-                  required
-                  class="w-full bg-dark-light border border-border px-6 py-4 text-base text-grey-light focus:border-accent outline-none transition-colors rounded resize-none"
-                ></textarea>
-
-                <button
-                  type="submit"
-                  class="w-full border-2 border-accent px-12 py-5 text-base tracking-wide hover:bg-accent hover:text-dark transition-all duration-500 font-medium rounded"
-                >
-                  Send Message
-                </button>
-              </form>
-            </div>
-
-            <!-- Contact Info -->
-            <div class="space-y-12 md:mt-4">
-              <div>
-                <h3 class="font-display text-2xl font-light text-accent mb-5">
-                  Directed by Mike Ching
-                </h3>
-                <p class="text-base leading-relaxed text-grey-light">
-                  "Your trusted design partner for ambitious business
-                  owners."<br />
-                  Designer, Photographer & Gem Hunter<br />
-                  <a
-                    href="https://www.designbyching.com"
-                    class="text-accent hover:underline"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    >www.designbyching.com</a
-                  >
-                </p>
-              </div>
-
-              <div>
-                <h3 class="font-display text-2xl font-light text-accent mb-5">
-                  Quick Contact
-                </h3>
-                <p class="text-lg space-y-3">
-                  <a
-                    href="https://wa.me/61477726885"
-                    class="hover:text-accent transition-colors block"
-                    >WhatsApp: +61 4777 26885</a
-                  >
-                  <a
-                    href="mailto:mike@designbyching.com"
-                    class="hover:text-accent transition-colors block"
-                    >Email: mike@designbyching.com</a
-                  >
-                </p>
-              </div>
-
-              <div>
-                <h3 class="font-display text-2xl font-light text-accent mb-5">
-                  Business Hours
-                </h3>
-                <p class="text-lg text-grey">
-                  Monday – Saturday: 9:00 AM – 6:00 PM<br />
-                  (By appointment preferred)
-                </p>
-              </div>
-            </div>
-          </div>
+    <main
+      class="flex-grow flex items-center justify-center pt-24 md:pt-32 pb-16 px-6"
+    >
+      <div class="text-center max-w-3xl">
+        <div class="mb-8 md:mb-12">
+          <span class="inline-block text-6xl md:text-8xl animate-fade-in"
+            >✨</span
+          >
         </div>
-      </section>
+
+        <h1
+          class="font-display text-4xl md:text-6xl lg:text-7xl font-light text-white leading-tight mb-6 animate-fade-in [animation-delay:0.2s]"
+        >
+          Thank You!
+        </h1>
+
+        <p
+          class="text-lg md:text-xl text-grey-light mb-10 md:mb-14 leading-relaxed animate-fade-in [animation-delay:0.4s]"
+        >
+          Your message has been successfully sent.
+          <br class="hidden md:block" />
+          Mike will review it shortly and get back to you soon — usually within
+          24–48 hours.
+        </p>
+
+        <p class="text-base md:text-lg text-grey mb-12">
+          Looking forward to helping you showcase your gemstones with
+          brilliance.
+        </p>
+
+        <a
+          href="/"
+          class="inline-block border-2 border-accent px-10 py-5 md:px-12 md:py-6 text-base md:text-lg tracking-wide text-white hover:bg-accent hover:text-dark transition-all duration-500 rounded font-medium animate-fade-in [animation-delay:0.6s]"
+        >
+          Back to Home
+        </a>
+      </div>
     </main>
 
-    <!-- Footer -->
+    <!-- Footer (same as your updated version) -->
     <footer
       class="bg-dark-light text-grey py-20 md:py-32 border-t border-border"
     >
       <div class="container mx-auto px-6 lg:px-12">
         <div
-          class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 text-center md:text-left"
+          class="grid grid-cols-1 md:grid-cols-3 gap-y-12 md:gap-x-12 lg:gap-x-24"
         >
-          <div>
-            <h4 class="font-display text-2xl font-light mb-6 text-accent">
-              GEMSHOTS PRO
-            </h4>
-            <p class="text-sm leading-relaxed">
+          <div class="flex flex-col">
+            <a
+              href="/"
+              class="inline-flex items-baseline gap-2 text-2xl md:text-3xl tracking-widest mb-6"
+            >
+              <span class="font-mont font-bold text-white">GEMSHOTS</span>
+              <span class="font-mont font-light text-accent">PRO</span>
+            </a>
+            <p class="text-sm leading-relaxed max-w-xs">
               Directed by
               <a
                 href="https://www.instagram.com/designbyching/"
-                class="hover:text-accent transition-colors"
+                class="text-white hover:text-accent transition-colors underline underline-offset-4 decoration-border"
                 target="_blank"
                 rel="noopener noreferrer"
                 >Mike Ching</a
-              ><br />Designer, Photographer & Gem Hunter<br /><a
+              ><br />
+              <span class="mt-1 block text-grey-dark"
+                >Designer, Photographer & Gem Hunter</span
+              >
+              <a
                 href="https://www.designbyching.com"
-                class="hover:text-accent transition-colors"
+                class="hover:text-accent transition-colors block mt-2"
                 target="_blank"
                 rel="noopener noreferrer"
                 >www.designbyching.com</a
@@ -306,13 +230,13 @@
             </p>
           </div>
 
-          <div>
+          <div class="md:pl-4">
             <h4
               class="font-display text-lg font-light mb-6 tracking-wide text-accent"
             >
               LINKS
             </h4>
-            <ul class="space-y-3 text-sm">
+            <ul class="space-y-4 text-sm">
               <li>
                 <a href="/#services" class="hover:text-accent transition-colors"
                   >Services</a
@@ -343,9 +267,7 @@
                 >
               </li>
               <li>
-                <a
-                  href="/contact.html"
-                  class="hover:text-accent transition-colors"
+                <a href="/contact" class="hover:text-accent transition-colors"
                   >Contact</a
                 >
               </li>
@@ -358,31 +280,41 @@
             >
               CONTACT
             </h4>
-            <p class="text-sm leading-relaxed">
-              <a
-                href="https://wa.me/61477726885"
-                class="hover:text-accent transition-colors"
-                >WhatsApp: +61 4777 26885</a
-              ><br />
-              <a
-                href="mailto:mike@designbyching.com"
-                class="hover:text-accent transition-colors"
-                >mike@designbyching.com</a
-              >
-            </p>
+            <div class="space-y-4 text-sm leading-relaxed">
+              <p>
+                <span class="block text-xs uppercase text-grey-dark mb-1"
+                  >WhatsApp</span
+                >
+                <a
+                  href="https://wa.me/61477726885"
+                  class="text-white hover:text-accent transition-colors"
+                  >+61 4777 26885</a
+                >
+              </p>
+              <p>
+                <span class="block text-xs uppercase text-grey-dark mb-1"
+                  >Email</span
+                >
+                <a
+                  href="mailto:mike@designbyching.com"
+                  class="text-white hover:text-accent transition-colors"
+                  >mike@designbyching.com</a
+                >
+              </p>
+            </div>
           </div>
         </div>
 
         <div
-          class="mt-16 pt-10 border-t border-border text-center text-xs text-grey-dark"
+          class="mt-20 pt-10 border-t border-border/50 text-center text-xs text-grey-dark"
         >
           © 2026 GemShots Pro. All rights reserved.
         </div>
       </div>
     </footer>
 
+    <!-- Hamburger Menu Script (same as main) -->
     <script>
-      // Hamburger menu
       const hamburger = document.getElementById("hamburger");
       const mobileMenu = document.getElementById("mobile-menu");
       const body = document.body;
