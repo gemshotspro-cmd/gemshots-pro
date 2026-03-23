@@ -1,0 +1,233 @@
+[
+  {
+    "id": 0,
+    "category": "spinel",
+    "name": "Lilac Spinel",
+    "carat": 2.89,
+    "origin": "Sri Lanka (Ceylon)",
+    "price": 1250,
+    "images": [
+      "images/gems/lilac-spinel-2-89ct-front.jpg",
+      "images/gems/lilac-spinel-2-89ct-angle.jpg",
+      "images/gems/lilac-spinel-2-89ct-back.jpg",
+      "images/gems/lilac-spinel-2-89ct-bottom.jpg",
+      "images/gems/lilac-spinel-2-89ct-front.mp4",
+      "images/gems/lilac-spinel-2-89ct-angle.mp4",
+      "images/gems/lilac-spinel-2-89ct-back.mp4"
+    ],
+    "cut": "Cushion",
+    "clarity": "Loupe Clean",
+    "treatment": "None",
+    "certification": "GRS",
+    "description": "We absolutely love capturing the story of spinels, and this lilac stone is a perfect example of why. The way the soft purple tones glow from within is truly special. We took extra care to film and photograph this piece using macro lenses so you can see it exactly for what it is—no filters, just natural elegance. This particular stone was sold instantly, and we wanted the experience to feel intimate for the new owner. Along with the gem, she received high-resolution images and a private video to keep as a memory of its unique beauty.",
+    "sold": false
+  },
+  {
+    "id": 1,
+    "category": "sapphire",
+    "name": "Natural Heated Blue Sapphire",
+    "carat": 4.15,
+    "origin": "Sri Lanka (Ceylon)",
+    "price": 5400,
+    "images": [
+      "images/gems/blue-sapphire-heated-4-15ct-front.jpg",
+      "images/gems/blue-sapphire-heated-4-15ct-angle.jpg",
+      "images/gems/blue-sapphire-heated-4-15ct-back.jpg",
+      "images/gems/blue-sapphire-heated-4-15ct-bottom.jpg",
+      "images/gems/blue-sapphire-heated-4-15ct-front.mp4"
+    ],
+    "cut": "Oval",
+    "clarity": "VS",
+    "treatment": "Heat",
+    "certification": "AGTL.lk",
+    "description": "Blue sapphires are notoriously difficult to photograph. It is a real challenge to capture that deep Ceylon Blue without the camera making the stone look too dark or burnt. For this stone, we used professional, balanced lighting to hit every facet just right, bringing out the true blue color exactly as it looks in person. This sapphire features a classic oval shape with a native Ceylon cut. In Sri Lanka, our cutters prioritize the soul of the stone. Working with blue sapphire color is extra difficult; we cut specifically to keep the richest blue possible. While some prefer precision symmetry, over-cutting a sapphire can actually lower its value by losing that precious color. We kept this cut authentic to ensure the stone remains as vibrant and valuable as nature intended.",
+    "sold": false
+  },
+  {
+    "id": 2,
+    "category": "sapphire",
+    "name": "Fancy Light Blue Sapphire",
+    "carat": 2.5,
+    "origin": "Sri Lanka (Ceylon)",
+    "price": 550,
+    "images": [
+      "images/gems/fancy-light-blue-sapphire-2-50cts-front.jpg",
+      "images/gems/fancy-light-blue-sapphire-2-50cts-angle.jpg",
+      "images/gems/fancy-light-blue-sapphire-2-50cts-back.jpg",
+      "images/gems/fancy-light-blue-sapphire-2-50cts-bottom.jpg",
+      "images/gems/fancy-light-blue-sapphire-2-50cts-front.mp4"
+    ],
+    "cut": "Oval",
+    "clarity": "SI",
+    "treatment": "None",
+    "certification": "AGTL.lk",
+    "description": "This sapphire is a beautiful example of the Fancy side of the Ceylon family. It features a soft, almost ethereal light blue that transitions into even lighter, nearly washed-out tones toward the center. This unique color distribution gives the stone a very artistic, airy nature that is quite rare compared to traditional deep blues. Photographing a stone with such delicate saturation is a technical challenge. We used a soft, diffused light setup to ensure we didn't burn the pale blue or lose the stone's natural brightness. By documenting it this way, we’ve captured the true, subtle personality of the native Ceylon cut. Our local cutters in Sri Lanka shaped this 2.50ct oval to preserve its unique color-zoning and character, rather than over-cutting it for modern symmetry. We wanted to show this sapphire exactly as it is: a light-filled, natural work of art.",
+    "sold": false
+  },
+  {
+    "id": 3,
+    "category": "sapphire",
+    "name": "Yellow Sapphire",
+    "carat": 1.01,
+    "origin": "Sri Lanka (Ceylon)",
+    "price": 995,
+    "images": [
+      "images/gems/yellow-sapphire-1-01cts-front.jpg",
+      "images/gems/yellow-sapphire-1-01cts-angle.jpg",
+      "images/gems/yellow-sapphire-1-01cts-back.jpg",
+      "images/gems/yellow-sapphire-1-01cts-bottom.jpg",
+      "images/gems/yellow-sapphire-1-01cts-front.mp4"
+    ],
+    "cut": "Oval",
+    "clarity": "Loupe Clean",
+    "treatment": "Heat",
+    "certification": "GIA",
+    "description": "Yellow sapphires are all about energy, and this 1.01ct oval is a perfect example of a rich, vibrant Golden Yellow. When we see a stone with this much natural warmth, our goal is to capture that sunshine without letting the camera pull too much orange or making the yellow look flat. We used a specific professional lighting setup to ensure the brilliance of the facets matches the intensity of the color. In Sri Lanka, our cutters treat these stones with a deep respect for their natural saturation; they chose this oval shape to let the golden light pool in the center, creating a glow that radiates outward. We didn't want to over-edit or lose the stone's sharp internal life, so we documented it exactly as it sits - vivid, bright, and full of that classic Ceylon character.",
+    "sold": false
+  },
+  {
+    "id": 4,
+    "category": "spinel",
+    "name": "Reddish Pink Spinel",
+    "carat": 0.85,
+    "origin": "Nivithigala, Sri Lanka",
+    "price": 41500,
+    "images": [
+      "images/gems/reddish-pink-spinel-0-85ct-front.jpg",
+      "images/gems/reddish-pink-spinel-0-85ct-angle.jpg",
+      "images/gems/reddish-pink-spinel-0-85ct-back.jpg",
+      "images/gems/reddish-pink-spinel-0-85ct-bottom.jpg"
+    ],
+    "cut": "Oval",
+    "clarity": "Eye Clean",
+    "treatment": "None",
+    "certification": "TBA",
+    "description": "Capturing a 0.85ct stone is a unique challenge in our studio. To give you an idea of its scale, this gem is roughly the size of a small peppercorn or the tip of a standard pencil eraser. Despite its tiny footprint, it packs a massive punch of color. We used specialized macro lenses to dive deep into the stone, bringing out every internal reflection that the naked eye might miss at first glance. In our photography, we used precise lighting to ensure the camera captured the true reddish pink balance without it looking artificial. This stone features a classic native cut that we have documented from every angle to show how the light bounces through the crown. We wanted to show this spinel exactly as it is, a small, vibrant treasure with a personality much larger than its size.",
+    "sold": false
+  },
+  {
+    "id": 5,
+    "category": "sapphire",
+    "name": "Steel Blue Sapphire",
+    "carat": 1.89,
+    "origin": "Madagascar",
+    "price": 1200,
+    "images": [
+      "images/gems/heated-blue-sapphire-1-89cts-front.jpg",
+      "images/gems/heated-blue-sapphire-1-89cts-angle.jpg",
+      "images/gems/heated-blue-sapphire-1-89cts-back.jpg",
+      "images/gems/heated-blue-sapphire-1-89cts-bottom.jpg",
+      "images/gems/heated-blue-sapphire-1-89cts-front.mp4"
+    ],
+    "cut": "Emerald",
+    "clarity": "Loupe Clean",
+    "treatment": "Heated",
+    "certification": "TBA",
+    "description": "Steel blue sapphires have a very specific mood. They are not the traditional royal blue; instead, they carry a sophisticated, metallic grey-blue tone that feels modern and architectural. This 1.89ct emerald cut from Madagascar is a perfect example of this moody, industrial elegance. The emerald cut is unforgiving, but because this stone is loupe clean, the sharp hall-of-mirrors effect is breathtaking. In our studio, the challenge was to capture that metallic sheen without the stone looking like a flat grey. We used controlled, focused lighting to hit the long, step-cut facets, ensuring the blue still breathes through the steel tones. We documented this stone to show off its clean lines and geometric perfection. It is a stone for someone who appreciates precision and a color that feels both calm and strong.",
+    "sold": false
+  },
+  {
+    "id": 6,
+    "category": "sapphire",
+    "name": "Natural Heated Blue Sapphire",
+    "carat": 1.11,
+    "origin": "Sri Lanka (Ceylon)",
+    "price": 550,
+    "images": [
+      "images/gems/heated-blue-sapphire-1-11cts-front.jpg",
+      "images/gems/heated-blue-sapphire-1-11cts-angle.jpg",
+      "images/gems/heated-blue-sapphire-1-11cts-back.jpg",
+      "images/gems/heated-blue-sapphire-1-11cts-bottom.jpg",
+      "images/gems/heated-blue-sapphire-1-11cts-front.mp4",
+      "images/gems/heated-blue-sapphire-1-11cts-angle.mp4"
+    ],
+    "cut": "Oval",
+    "clarity": "Loupe Clean",
+    "treatment": "Heated",
+    "certification": "TBA",
+    "description": "Every natural sapphire has its own soul, and this 1.11ct piece from Sri Lanka is no exception. It is a great example of a stone where the cutter prioritized keeping that important 1-carat mark. Because of this, the oval cut is authentic to its weight, shaped specifically to retain as much of the natural material as possible. In our studio, we focused on capturing the genuine character of this sapphire. We used professional lighting to show that even with a native-style cut, the blue remains bright and the clarity is Loupe Clean. We believe all natural sapphires are awesome in their own way, and we wanted our photography to celebrate that. We documented it exactly as it is—a solid, honest Ceylon stone that kept its size and its spirit.",
+    "sold": false
+  },
+  {
+    "id": 7,
+    "category": "chrysoberyl",
+    "name": "Apple Green Chrysoberyl",
+    "carat": 4.5,
+    "origin": "Nivithigala, Sri Lanka",
+    "price": 3380,
+    "images": [
+      "images/gems/apple-green-chrysoberyl-4-50ct-front.jpg",
+      "images/gems/apple-green-chrysoberyl-4-50ct-angle.jpg",
+      "images/gems/apple-green-chrysoberyl-4-50ct-back.jpg",
+      "images/gems/apple-green-chrysoberyl-4-50ct-bottom.jpg",
+      "images/gems/apple-green-chrysoberyl-4-50ct-front.mp4"
+    ],
+    "cut": "Emerald",
+    "clarity": "Loupe Clean",
+    "treatment": "None",
+    "certification": "AGTL.lk",
+    "description": "Chrysoberyl is a stone that often gets overlooked, but this Apple Green piece from Nivithigala is a true showstopper. What makes this one so special is that it is completely untreated - nature gave it this vibrant neon glow all on its own. The emerald cut on this 4.50ct piece is a testament to the skill of the local Sri Lankan cutters; they chose this shape because the clarity is Loupe Clean, leaving no room for error. From a technical perspective, our goal was to highlight that zesty green saturation without over-processing the image. Using natural light simulations, We’ve captured the stone’s true brilliance and sharp internal geometry so that what you see on screen is exactly what you get in hand.",
+    "sold": false
+  },
+  {
+    "id": 8,
+    "category": "garnet",
+    "name": "Ceylon Red Garnet",
+    "carat": 2.69,
+    "origin": "Sri Lanka (Ceylon)",
+    "price": 75,
+    "images": [
+      "images/gems/red-garnet-2-69cts-front.jpg",
+      "images/gems/red-garnet-2-69cts-angle.jpg",
+      "images/gems/red-garnet-2-69cts-back.jpg",
+      "images/gems/red-garnet-2-69cts-bottom.jpg",
+      "images/gems/red-garnet-2-69cts-front.mp4"
+    ],
+    "cut": "Cushion",
+    "clarity": "SI",
+    "treatment": "None",
+    "certification": "TBA",
+    "description": "This 2.69ct Ceylon red garnet is currently in its raw, as-found state. Before it goes for repolishing, we wanted to document it exactly as it is. While it currently shows small surface scratches, knocks, and tiny chips, these details are perfect for studying the natural life of a gemstone before it is restored. We used a specific high-resolution macro setup to capture every honest detail of the stone. This wasn't about making it look perfect; it was about showing our ability to document a gem’s true condition for study purposes. Seeing the stone like this allows us to map out the work needed for the repolishing process. We wanted to share this look behind the scenes so you can see the before-and-after journey of a natural garnet and how our professional photography reveals the reality of the stone.",
+    "sold": false
+  },
+  {
+    "id": 9,
+    "category": "sapphire",
+    "name": "Natural Heated Pink Sapphire",
+    "carat": 1.56,
+    "origin": "Sri Lanka (Ceylon)",
+    "price": 110,
+    "images": [
+      "images/gems/heated-pink-sapphire-1-56cts-front.jpg",
+      "images/gems/heated-pink-sapphire-1-56cts-angle.jpg",
+      "images/gems/heated-pink-sapphire-1-56cts-back.jpg",
+      "images/gems/heated-pink-sapphire-1-56cts-angle2.jpg"
+    ],
+    "cut": "Oval",
+    "clarity": "Translucent",
+    "treatment": "Heated",
+    "certification": "TBA",
+    "description": "This 1.56ct pink sapphire is a fascinating look into the technical side of the gem trade. Right now, the stone has a translucent, smoky appearance that softens its overall look. While it might seem dull at first glance, the owner has identified exactly what is happening inside the crystal structure. We documented this stone in its current state to show the starting point of its transformation. The plan is to put this sapphire through another round of heat treatment to clear that silk and smoke. By doing so, we expect to turn this into a vibrant hot pink, significantly increasing its beauty and value. We wanted to capture this before stage to highlight the expert knowledge required to see the true potential hidden within a stone that is still waiting for its final glow.",
+    "sold": false
+  },
+  {
+    "id": 10,
+    "category": "sapphire",
+    "name": "Natural Blue Sapphire",
+    "carat": 3.51,
+    "origin": "Sri Lanka (Ceylon)",
+    "price": 225,
+    "images": [
+      "images/gems/blue-sapphire-3-50cts-front.jpg",
+      "images/gems/blue-sapphire-3-50cts-angle.jpg",
+      "images/gems/blue-sapphire-3-50cts-back.jpg",
+      "images/gems/blue-sapphire-3-50cts-bottom.jpg"
+    ],
+    "cut": "Cushion",
+    "clarity": "Loupe Clean",
+    "treatment": "Heated",
+    "certification": "GIA",
+    "description": "This 3.51ct sapphire from Sri Lanka has a very specific, quiet character. It sits right in the middle of the color scale, offering a soft and moody blue that feels more classic and reserved than a typical vivid stone. In our studio, we avoided high-contrast lighting to ensure we did not force an artificial shine. Instead, we used balanced, professional light to show the stone exactly as it is—an understated, natural piece with a calm presence. We documented this square cushion cut to highlight its genuine, untreated depth, capturing a sapphire that is defined by its maturity and timeless appeal rather than a loud flash of color.",
+    "sold": false
+  }
+]

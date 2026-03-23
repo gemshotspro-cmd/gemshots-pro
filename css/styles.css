@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern link hover - works when hovering the whole card */
+.group:hover .view-link::after {
+  width: 100%;
+}
+
+.view-link {
+  position: relative;
+  display: block;
+  height: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
+.view-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 12px; /* adjust this value to move the line higher/lower */
+  left: 1.5rem; /* matches p-6 padding */
+  right: 1.5rem;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+  pointer-events: none;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Lock body when menu open */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* Thumbnail styles */
+.thumbnail {
+  @apply cursor-pointer opacity-60 hover:opacity-100 transition-opacity;
+}
+
+.thumbnail.active {
+  @apply opacity-100 border-accent;
+}
+
+/* Subtle but clearly visible tech micro-grid for dark backgrounds */
+.bg-dark,
+.bg-dark\/90,
+.bg-dark-light\/50 {
+  background-color: #0a0a0a; /* fallback */
+  background-image:
+    linear-gradient(rgba(180, 180, 220, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(180, 180, 220, 0.07) 1px, transparent 1px);
+  background-size: 6px 6px;
+  background-position: center center;
+}
+
+/* ============================================
+   Custom Select Dropdown Arrow – FIXED & RELIABLE
+   Works on package dropdown and any other select.appearance-none
+   ============================================ */
+
+select.appearance-none {
+  /* Remove default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* Custom gold arrow using inline SVG */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%23ffdf01' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1.25rem center;
+  background-size: 12px auto;
+
+  /* Make space for the arrow on the right */
+  padding-right: 2.75rem !important;
+
+  /* Ensure consistent look */
+  background-color: #1a1a1a; /* matches bg-dark-light */
+  border: 1px solid #303030;
+  color: #d0d0d0;
+  transition: all 0.2s ease;
+}
+
+select.appearance-none:focus {
+  border-color: #ffdf01;
+  box-shadow: 0 0 0 3px rgba(255, 223, 1, 0.15);
+  outline: none;
+}
+
+select.appearance-none:hover {
+  background-color: #222;
+  border-color: #505050;
+}
+
+/* Optional: arrow flips upward when open (not perfect in all browsers, but nice touch) */
+select.appearance-none[open] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8' fill='none'%3E%3Cpath d='M1 7L6 2L11 7' stroke='%23ffdf01' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+/* Better checkbox focus for accessibility */
+input[type="checkbox"]:focus {
+  outline: 2px solid #ffdf01;
+  outline-offset: 2px;
+}
+
+/* Optional: make number input arrows match accent color */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}

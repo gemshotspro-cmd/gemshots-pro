@@ -1,0 +1,890 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      GemShots Pro – Professional Gem Photography & Digital Services
+    </title>
+    <meta
+      name="description"
+      content="Expert gem photography, video, and digital transformation services for Ceylon gemstones."
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom Tailwind config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "system-ui", "sans-serif"],
+              display: ["PP Mori", "sans-serif"],
+              mont: ["Montserrat", "sans-serif"],
+            },
+            colors: {
+              dark: { DEFAULT: "#0a0a0a", light: "#1a1a1a" },
+              grey: { DEFAULT: "#a0a0a0", dark: "#606060", light: "#d0d0d0" },
+              accent: "#ffdf01",
+              "accent-dark": "#009955",
+              border: "#303030",
+            },
+            spacing: { 
+              18: "4.5rem", 
+              22: "5.5rem", 
+              30: "7.5rem", 
+              36: "9rem" 
+            },
+            letterSpacing: { 
+              wide: "0.05em" 
+            },
+            animation: {
+              "fade-in": "fadeIn 1s ease-out forwards",
+              "infinite-scroll": "infinite-scroll 20s linear infinite",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              "infinite-scroll": {
+                "0%":   { transform: "translateX(0)" },
+                "100%": { transform: "translateX(-99%)" }
+              }
+            }
+          }
+        }
+      };
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link 
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" 
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body class="bg-dark text-grey-light antialiased">
+    <!-- Header -->
+    <header
+      class="fixed top-0 left-0 right-0 z-50 bg-dark/90 backdrop-blur-md border-b border-border"
+    >
+      <div class="container mx-auto px-6 lg:px-12">
+        <div class="flex items-center justify-between h-20">
+          <a href="/" class="text-xl lg:text-2xl font-mont tracking-widest flex items-baseline gap-2">
+            <span class="font-bold text-white">GEMSHOTS</span>
+            <span class="font-light text-accent">PRO</span>
+          </a>
+
+          <!-- Desktop Nav -->
+          <nav class="hidden md:flex items-center space-x-12">
+            <a href="#services" class="text-sm tracking-wide hover:text-accent transition-colors">Services</a>
+            <a href="#portfolio" class="text-sm tracking-wide hover:text-accent transition-colors">Portfolio</a>
+            <a href="#process" class="text-sm tracking-wide hover:text-accent transition-colors">Process</a>
+            <a href="#pricing" class="text-sm tracking-wide hover:text-accent transition-colors">Pricing</a>
+            <a href="#contact" class="text-sm tracking-wide hover:text-accent transition-colors">Contact</a>
+          </nav>
+
+          <!-- Hamburger Button -->
+          <button
+            id="hamburger"
+            class="md:hidden flex flex-col justify-between w-6 h-5"
+            aria-label="Toggle menu"
+            aria-expanded="false"
+          >
+            <span class="block w-full h-[2px] bg-grey-light rounded-full transition-all duration-300"></span>
+            <span class="block w-full h-[2px] bg-grey-light rounded-full transition-all duration-300"></span>
+            <span class="block w-full h-[2px] bg-grey-light rounded-full transition-all duration-300"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 bg-dark z-40 transform translate-x-full transition-transform duration-500 ease-in-out md:hidden flex items-center justify-center pt-48"
+    >
+      <nav class="flex flex-col items-center space-y-12 text-3xl font-light text-grey-light">
+        <a href="#services" class="hover:text-accent transition-colors">Services</a>
+        <a href="#portfolio" class="hover:text-accent transition-colors">Portfolio</a>
+        <a href="#process" class="hover:text-accent transition-colors">Process</a>
+        <a href="#pricing" class="hover:text-accent transition-colors">Pricing</a>
+        <a href="#contact" class="hover:text-accent transition-colors">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Hero -->
+    <section id="hero" class="relative min-h-screen flex flex-col bg-dark overflow-hidden pt-20 md:pt-24 lg:pt-28">
+      <div class="relative z-10 flex-grow flex items-center justify-center">
+        <div class="container mx-auto px-6 lg:px-12 text-center py-12 md:py-16 lg:py-20">
+          <p class="text-sm md:text-base tracking-wide text-gray-200 uppercase mb-6 md:mb-10 animate-fade-in">
+            DIGITAL GEM TRANSFORMATION
+          </p>
+
+          <h1 class="font-display text-4xl md:text-6xl lg:text-7xl font-light leading-tight mb-10 md:mb-14 lg:mb-16 text-white animate-fade-in [animation-delay:0.2s]">
+            Capture <span class="text-accent">Brilliance</span><br />
+            Sell Faster
+          </h1>
+
+          <!-- Carousel -->
+          <div class="w-full max-w-6xl mx-auto mb-12 md:mb-16 lg:mb-20">
+            <div class="relative overflow-hidden rounded-xl">
+              <div class="flex animate-infinite-scroll hover:[animation-play-state:paused] whitespace-nowrap">
+                <!-- First set -->
+                <div class="flex shrink-0">
+                  <div class="w-56 h-56 md:w-64 lg:w-72 lg:h-72 flex-shrink-0 mx-3 md:mx-4 lg:mx-6">
+                    <img src="/images/gems/lilac-spinel-2-89ct-angle.jpg" alt="Lilac Spinel 2.89ct – angled view showing color and brilliance" class="w-full h-full object-cover rounded-xl shadow-xl border border-border/40">
+                  </div>
+                  <div class="w-56 h-56 md:w-64 lg:w-72 lg:h-72 flex-shrink-0 mx-3 md:mx-4 lg:mx-6">
+                    <img src="/images/gems/blue-sapphire-heated-4-15ct-angle.jpg" alt="Heated Blue Sapphire 4.15ct – angled macro shot" class="w-full h-full object-cover rounded-xl shadow-xl border border-border/40">
+                  </div>
+                  <div class="w-56 h-56 md:w-64 lg:w-72 lg:h-72 flex-shrink-0 mx-3 md:mx-4 lg:mx-6">
+                    <img src="/images/gems/yellow-sapphire-1-01cts-front.jpg" alt="Yellow Sapphire 1.01ct – front face view" class="w-full h-full object-cover rounded-xl shadow-xl border border-border/40">
+                  </div>
+                  <div class="w-56 h-56 md:w-64 lg:w-72 lg:h-72 flex-shrink-0 mx-3 md:mx-4 lg:mx-6">
+                    <img src="/images/gems/fancy-light-blue-sapphire-2-50cts-front.jpg" alt="Fancy Light Blue Sapphire 2.50ct – front view" class="w-full h-full object-cover rounded-xl shadow-xl border border-border/40">
+                  </div>
+                  <div class="w-56 h-56 md:w-64 lg:w-72 lg:h-72 flex-shrink-0 mx-3 md:mx-4 lg:mx-6">
+                    <img src="/images/gems/heated-blue-sapphire-1-11cts-front.jpg" alt="Heated Blue Sapphire 1.11ct – front face macro" class="w-full h-full object-cover rounded-xl shadow-xl border border-border/40">
+                  </div>
+                  <div class="w-56 h-56 md:w-64 lg:w-72 lg:h-72 flex-shrink-0 mx-3 md:mx-4 lg:mx-6">
+                    <img src="/images/gems/reddish-pink-spinel-0-85ct-front.jpg" alt="Reddish Pink Spinel 0.85ct – front view showing vivid color" class="w-full h-full object-cover rounded-xl shadow-xl border border-border/40">
+                  </div>
+                </div>
+
+                <!-- Duplicate set for seamless loop -->
+                <div class="flex shrink-0">
+                  <div class="w-56 h-56 md:w-64 lg:w-72 lg:h-72 flex-shrink-0 mx-3 md:mx-4 lg:mx-6">
+                    <img src="/images/gems/lilac-spinel-2-89ct-angle.jpg" alt="Lilac Spinel 2.89ct – angled view showing color and brilliance" class="w-full h-full object-cover rounded-xl shadow-xl border border-border/40">
+                  </div>
+                  <div class="w-56 h-56 md:w-64 lg:w-72 lg:h-72 flex-shrink-0 mx-3 md:mx-4 lg:mx-6">
+                    <img src="/images/gems/blue-sapphire-heated-4-15ct-angle.jpg" alt="Heated Blue Sapphire 4.15ct – angled macro shot" class="w-full h-full object-cover rounded-xl shadow-xl border border-border/40">
+                  </div>
+                  <div class="w-56 h-56 md:w-64 lg:w-72 lg:h-72 flex-shrink-0 mx-3 md:mx-4 lg:mx-6">
+                    <img src="/images/gems/yellow-sapphire-1-01cts-front.jpg" alt="Yellow Sapphire 1.01ct – front face view" class="w-full h-full object-cover rounded-xl shadow-xl border border-border/40">
+                  </div>
+                  <div class="w-56 h-56 md:w-64 lg:w-72 lg:h-72 flex-shrink-0 mx-3 md:mx-4 lg:mx-6">
+                    <img src="/images/gems/fancy-light-blue-sapphire-2-50cts-front.jpg" alt="Fancy Light Blue Sapphire 2.50ct – front view" class="w-full h-full object-cover rounded-xl shadow-xl border border-border/40">
+                  </div>
+                  <div class="w-56 h-56 md:w-64 lg:w-72 lg:h-72 flex-shrink-0 mx-3 md:mx-4 lg:mx-6">
+                    <img src="/images/gems/heated-blue-sapphire-1-11cts-front.jpg" alt="Heated Blue Sapphire 1.11ct – front face macro" class="w-full h-full object-cover rounded-xl shadow-xl border border-border/40">
+                  </div>
+                  <div class="w-56 h-56 md:w-64 lg:w-72 lg:h-72 flex-shrink-0 mx-3 md:mx-4 lg:mx-6">
+                    <img src="/images/gems/reddish-pink-spinel-0-85ct-front.jpg" alt="Reddish Pink Spinel 0.85ct – front view showing vivid color" class="w-full h-full object-cover rounded-xl shadow-xl border border-border/40">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-12 md:mb-16 leading-relaxed animate-fade-in [animation-delay:0.4s]">
+            Professional photography, videos, and digital services to transform
+            your gem inventory into high-converting online assets.
+          </p>
+
+          <a href="#services"
+             class="inline-block border-2 border-accent px-10 py-4 md:px-12 md:py-5 text-sm md:text-base tracking-wide text-white hover:bg-accent hover:text-dark transition-all duration-500 animate-fade-in [animation-delay:0.6s]">
+            EXPLORE SERVICES
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Services Section -->
+    <section id="services" class="py-32 md:py-40 bg-dark">
+      <div class="container mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16 md:mb-24">
+  <p class="text-sm tracking-wide text-grey uppercase mb-6">
+    OUR SERVICES
+  </p>
+  <h2 class="font-display text-3xl md:text-5xl font-light text-white mb-6 md:mb-8">
+    Gem Digital Transformation
+  </h2>
+  <p class="text-base md:text-lg text-grey max-w-3xl mx-auto leading-relaxed">
+    Directed by Mike Ching of <a href="https://www.designbyching.com" class="text-accent hover:underline transition-colors" target="_blank" rel="noopener noreferrer">Design by Ching</a> - A Sydney-based creative with 15 years of experience in brand identity and web design. Mike brings a designer’s eye and professional precision to GemShots Pro, ensuring every gemstone is captured with world-class quality and storytelling.
+  </p>
+</div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12"
+        >
+          <div
+            class="p-8 border border-border rounded-lg hover:border-accent transition-colors"
+          >
+            <h3 class="font-display text-xl font-light mb-4 text-accent">
+              Gem Photography
+            </h3>
+            <p class="text-grey">
+              High-definition macro shots capturing color, clarity, and fire for
+              your precious gem stones.
+            </p>
+          </div>
+          <div
+            class="p-8 border border-border rounded-lg hover:border-accent transition-colors"
+          >
+            <h3 class="font-display text-xl font-light mb-4 text-accent">
+              Video Reels
+            </h3>
+            <p class="text-grey">
+              Dynamic 360° videos and short reels for social media and whatsapp sharing.
+            </p>
+          </div>
+          <div
+            class="p-8 border border-border rounded-lg hover:border-accent transition-colors"
+          >
+            <h3 class="font-display text-xl font-light mb-4 text-accent">
+              Online Shop Setup
+            </h3>
+            <p class="text-grey">
+              Custom digital galleries and e-commerce integration for your gem inventory.
+            </p>
+          </div>
+          <div
+            class="p-8 border border-border rounded-lg hover:border-accent transition-colors"
+          >
+            <h3 class="font-display text-xl font-light mb-4 text-accent">
+              Social Media Content
+            </h3>
+            <p class="text-grey">
+              Ready-to-post images and videos optimized for faster loading speeds.
+            </p>
+          </div>
+          <div
+            class="p-8 border border-border rounded-lg hover:border-accent transition-colors"
+          >
+            <h3 class="font-display text-xl font-light mb-4 text-accent">
+              Digital Asset Management
+            </h3>
+            <p class="text-grey">
+              Cloud-based organization and digital asset management for your gem
+              collections.
+            </p>
+          </div>
+          <div
+            class="p-8 border border-border rounded-lg hover:border-accent transition-colors"
+          >
+            <h3 class="font-display text-xl font-light mb-4 text-accent">
+              Gem Hunting
+            </h3>
+            <p class="text-grey">
+                Sourcing rare gemstones from certified suppliers with authenticity verification and competitive pricing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-32 md:py-40 bg-dark-light/50">
+      <div class="container mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16 md:mb-24">
+          <p class="text-sm tracking-wide text-grey uppercase mb-6">OUR WORK</p>
+          <h2 class="font-display text-3xl md:text-5xl font-light text-white">
+            Portfolio
+          </h2>
+        </div>
+
+        <div
+          id="gem-grid"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12"
+        >
+          <!-- Dynamic portfolio items here -->
+        </div>
+
+        <div class="text-center mt-16 md:mt-24">
+          <button
+            id="view-all"
+            class="text-sm md:text-base tracking-wide hover:text-accent transition-colors"
+          >
+            View More →
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gem Detail Section (Hidden Initially) -->
+    <section id="gem-detail" class="hidden py-32 md:py-40 bg-dark-light/50">
+      <div class="container mx-auto px-6 lg:px-12">
+        <div id="detail-content" class="w-full mb-24">
+          <!-- Dynamic detail content here -->
+        </div>
+        <div class="text-center mb-16">
+          <h2 class="font-display text-3xl md:text-4xl font-light text-white">
+            More From Our Portfolio
+          </h2>
+        </div>
+        <div
+          id="related-grid"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12"
+        >
+          <!-- Dynamic related portfolio items here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-32 md:py-40 bg-dark">
+      <div class="container mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16 md:mb-24">
+      <p class="text-sm tracking-wide text-grey uppercase mb-6 font-medium">
+        THE METHODOLOGY
+      </p>
+      <h2 class="font-display text-3xl md:text-5xl font-light text-white leading-tight">
+        Precision Engineering <br class="hidden md:block" /> & Digital Artistry
+      </h2>
+      <p class="mt-6 text-grey max-w-2xl mx-auto text-base md:text-lg">
+        We combine world-class macro optics with advanced cloud architecture to transform your physical inventory into elite digital assets.
+      </p>
+    </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div>
+  <h3 class="font-display text-xl font-light mb-6 text-accent">
+    Professional Gear
+  </h3>
+  <ul class="space-y-4 text-grey">
+          <li>
+            <strong class="text-white">Camera:</strong> 
+            Ultra-high resolution full-frame sensors used to capture extreme clarity and microscopic gem detail.
+          </li>
+          <li>
+            <strong class="text-white">Lenses:</strong> 
+            Professional-grade macro optics designed to showcase every facet, inclusion, and internal characteristic.
+          </li>
+          <li>
+            <strong class="text-white">Lighting:</strong> 
+            Studio-grade, color-balanced lighting systems tuned for natural, true-to-life tones and spectral fire.
+          </li>
+          <li>
+            <strong class="text-white">Motion:</strong> 
+            Precision motorized stages and turntables for perfectly smooth, cinematic 360° gemstone rotations.
+          </li>
+          <li>
+            <strong class="text-white">Accuracy:</strong> 
+            Advanced color-calibration workflows to ensure your gemstones look real and consistent on every screen.
+          </li>
+        </ul>
+</div>
+
+          <div>
+  <h3 class="font-display text-xl font-light mb-6 text-accent">
+    Digital Workflow
+  </h3>
+  <ul class="space-y-4 text-grey">
+    <li><strong class="text-white">Mastering:</strong> Professional retouching and color-correction for true-to-life brilliance.</li>
+    <li><strong class="text-white">Web Design:</strong> Custom-built digital galleries designed to load instantly on any mobile device.</li>
+    <li><strong class="text-white">Hosting:</strong> High-speed global delivery so your clients can view your stock from anywhere.</li>
+    <li><strong class="text-white">Management:</strong> Your own private digital vault for easy organizing and sharing of your gem media.</li>
+    <li><strong class="text-white">Artistry:</strong> Creative background styling and custom branding to make your stones stand out.</li>
+  </ul>
+</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-32 md:py-40 bg-dark-light/50">
+      <div class="container mx-auto px-6 lg:px-12">
+        <div class="text-center mb-16 md:mb-24">
+          <p class="text-sm tracking-wide text-grey uppercase mb-6">
+            OUR PLANS
+          </p>
+          <h2 class="font-display text-3xl md:text-5xl font-light text-white">
+            Pricing
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
+          <div
+            class="p-8 border border-border rounded-lg hover:border-accent transition-colors text-center relative"
+            data-tier="basic"
+          >
+            <h3 class="font-display text-3xl font-light mb-4 text-accent">
+              Basic Suite
+            </h3>
+            <p class="text-2xl font-bold text-white mb-6 price-container">
+              <span class="current-price" data-original-price="5000">LKR 5,000</span> <span class="text-sm text-grey">/stone</span>
+              <del class="original-price hidden ml-2 text-grey text-2xl"></del>
+            </p>
+            <span class="discount-badge hidden absolute top-4 right-4 bg-accent text-dark px-3 py-1 text-xs font-medium rounded">Save 0%</span>
+            <ul class="space-y-3 text-grey mb-8 text-left">
+              <li>4 x Focus-Stacked Images of your gem stone: Multi-angle "Hero" shots (Table, Pavilion, Side).</li>
+              <li>1 x Tweezer Macro Video: 4K manual rotation to show "life" and fire.</li>
+              <li>Standard Post-Processing: Professional color grading and dust removal.</li>
+              <li>Browser-Ready Delivery: Optimized files for instant WhatsApp sending and fast web loading.</li>
+              <li>Technical Edge: Captured with Nikon Z6ii + Nikkor Z 105mm Macro.</li>
+            </ul>
+            <a
+              href="/booking.html?package=basic"
+              class="inline-block border border-accent px-8 py-3 hover:bg-accent hover:text-dark transition-colors"
+              >Get Started</a
+            >
+          </div>
+          <div
+            class="p-8 border border-accent rounded-lg bg-dark-light hover:border-accent transition-colors text-center relative"
+            data-tier="pro"
+          >
+            <div class="mb-6 text-center">
+  <h3 class="font-display text-3xl font-light text-accent">
+    Pro Suite
+  </h3>
+  <span class="inline-block mt-2 px-4 py-1 text-xs font-medium text-cyan-300 bg-cyan-500/20 border border-cyan-500/40 rounded-full">
+    Most Popular
+  </span>
+</div>
+            <p class="text-2xl font-bold text-white mb-6 price-container">
+              <span class="current-price" data-original-price="10000">LKR 10,000</span> <span class="text-sm text-grey">/stone</span>
+              <del class="original-price hidden ml-2 text-grey text-2xl"></del>
+            </p>
+            <span class="discount-badge hidden absolute top-4 right-4 bg-accent text-dark px-3 py-1 text-xs font-medium rounded">Save 0%</span>
+            <ul class="space-y-3 text-grey mb-8 text-left">
+              <li>Includes Everything in the Basic Suite +</li>
+              <li>1 x 4K 360° Turntable Video: A perfectly centered, motorized rotation showing edge-to-edge brilliance and symmetry.</li>
+              <li>Enhanced Retouching: Micro-level pixel cleaning for a flawless digital presence.</li>
+              <li>Designer Branding: High-fidelity watermark/logo placement.</li>
+            </ul>
+            <a
+              href="/booking.html?package=pro"
+              class="inline-block border border-accent px-8 py-3 bg-accent text-dark hover:bg-transparent hover:text-accent transition-colors"
+              >Get Started</a
+            >
+          </div>
+          <div
+            class="p-8 border border-border rounded-lg hover:border-accent transition-colors text-center relative"
+            data-tier="premium"
+          >
+            <h3 class="font-display text-3xl font-light mb-4 text-accent">
+              Premium Suite
+            </h3>
+            <p class="text-2xl font-bold text-white mb-6 price-container">
+              <span class="current-price" data-original-price="20000">LKR 20,000</span> <span class="text-sm text-grey">/stone</span>
+              <del class="original-price hidden ml-2 text-grey text-2xl"></del>
+            </p>
+            <span class="discount-badge hidden absolute top-4 right-4 bg-accent text-dark px-3 py-1 text-xs font-medium rounded">Save 0%</span>
+            <ul class="space-y-3 text-grey mb-8 text-left">
+              <li>Includes Everything in the Pro Suite +</li>
+              <li>Deep-Stack Engineering: Extra-deep focus stacking for absolute edge-to-edge clarity on complex cuts.</li>
+              <li>Elite Color Matching: Rigorous calibration to match the exact hue and saturation required for international certification standards.</li>
+              <li>Priority Post-Production: Advanced masking and lighting adjustments to highlight internal characteristics.</li>
+              <li>Marketing-Ready Assets: Includes 1 "Social Media Edit" (short-form vertical video with music/titles).</li>
+            </ul>
+            <a
+              href="/booking.html?package=premium"
+              class="inline-block border border-accent px-8 py-3 hover:bg-accent hover:text-dark transition-colors"
+              >Get Started</a
+            >
+          </div>
+          <div
+            class="p-8 border border-border rounded-lg hover:border-accent transition-colors text-center relative"
+            data-tier="elite"
+          >
+            <h3 class="font-display text-3xl font-light mb-4 text-accent">
+              Elite 10 Bundle
+            </h3>
+            <p class="text-2xl font-bold text-white mb-6 price-container">
+              <span class="current-price" data-original-price="100000">LKR 100,000</span> <span class="text-sm text-grey">/10 stones</span>
+              <del class="original-price hidden ml-2 text-grey text-2xl"></del>
+            </p>
+            <span class="discount-badge hidden absolute top-4 right-4 bg-accent text-dark px-3 py-1 text-xs font-medium rounded">Save 0%</span>
+            <ul class="space-y-3 text-grey mb-8 text-left">
+  <li>10 Complete Pro Media Suites including 4K 360° videos and stacked images.</li>
+  <li>FREE Session Fee (LKR 20,000 Value) – We bring the entire macro studio to you.</li>
+  <li>Express 48-Hour Delivery with priority post-processing for all 10 stones.</li>
+  <li>On-site live review to confirm every facet and angle meets your standards.</li>
+  <li>White-glove service operating within your secure office or vault environment.</li>
+</ul>
+            <a
+              href="/booking.html?package=elite"
+              class="inline-block border border-accent px-8 py-3 hover:bg-accent hover:text-dark transition-colors"
+              >Get Started</a
+            >
+          </div>
+        </div>
+        <div class="text-center mt-12 text-grey">
+          <p><strong>Session Fee (Call-out Fee):</strong> LKR 20,000 (Fixed per session). We bring the entire macro studio to your office or vault. Live Review & Security ensured.</p> <br><p></p> Note: For stones valued at over LKR 1,000,000, please call for a custom bespoke quote.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking Section -->
+    <!-- <section id="booking" class="py-32 md:py-40 bg-dark">
+      <div class="container mx-auto px-6 lg:px-12 text-center">
+        <h2
+          class="font-display text-3xl md:text-5xl font-light text-white mb-12"
+        >
+          Book Your Session
+        </h2>
+        <form
+          name="booking"
+          method="POST"
+          data-netlify="true"
+          class="max-w-md mx-auto space-y-6"
+        >
+          <input type="hidden" name="form-name" value="booking" />
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+            class="w-full bg-dark-light border border-border px-6 py-3 text-sm text-grey-light"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+            class="w-full bg-dark-light border border-border px-6 py-3 text-sm text-grey-light"
+          />
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Your Phone (WhatsApp preferred)"
+            required
+            class="w-full bg-dark-light border border-border px-6 py-3 text-sm text-grey-light"
+          />
+          <select
+            name="package"
+            required
+            class="w-full bg-dark-light border border-border px-6 py-3 text-sm text-grey-light"
+          >
+            <option value="" disabled selected>Select Package</option>
+            <option value="basic">Basic Suite</option>
+            <option value="pro">Pro Suite</option>
+            <option value="premium">Premium Suite</option>
+            <option value="elite">Elite 10 Bundle</option>
+          </select>
+          <input
+            type="number"
+            name="num_stones"
+            placeholder="Number of Stones"
+            min="1"
+            required
+            class="w-full bg-dark-light border border-border px-6 py-3 text-sm text-grey-light"
+          />
+          <textarea
+            name="message"
+            placeholder="Additional Details or Questions"
+            required
+            class="w-full bg-dark-light border border-border px-6 py-3 text-sm text-grey-light h-32"
+          ></textarea>
+          <div class="text-left">
+            <h3 class="font-display text-xl font-light mb-4 text-accent">Shoot Preparation Checklist</h3>
+            <p class="text-grey mb-4">Please confirm you've prepared the following for the best results:</p>
+            <ul class="space-y-2 text-grey">
+              <li class="flex items-center">
+                <input type="checkbox" id="cleaned" class="mr-2" />
+                <label for="cleaned">Stones cleaned and free of dust/oil</label>
+              </li>
+              <li class="flex items-center">
+                <input type="checkbox" id="sorted" class="mr-2" />
+                <label for="sorted">Stones sorted by quality/type for efficient shooting</label>
+              </li>
+              <li class="flex items-center">
+                <input type="checkbox" id="secure" class="mr-2" />
+                <label for="secure">Secure location ready with good lighting/ventilation</label>
+              </li>
+              <li class="flex items-center">
+                <input type="checkbox" id="details" class="mr-2" />
+                <label for="details">Gem details (carat, origin, etc.) prepared for reference</label>
+              </li>
+              <li class="flex items-center">
+                <input type="checkbox" id="branding" class="mr-2" />
+                <label for="branding">Branding elements (logo, watermark) provided if needed</label>
+              </li>
+            </ul>
+          </div>
+          <button
+            type="submit"
+            class="inline-block border-2 border-accent px-12 py-5 text-sm tracking-wide hover:bg-accent hover:text-dark transition-all duration-500"
+          >
+            Submit Booking
+          </button>
+        </form>
+      </div>
+    </section> -->
+
+    <!-- Contact Section -->
+<section id="contact" class="py-32 md:py-40 bg-dark">
+  <div class="container mx-auto px-6 lg:px-12 text-center">
+    <h2 class="font-display text-3xl md:text-5xl font-light text-white mb-12">
+      Get in Touch
+    </h2>
+
+    <form
+      name="contact-main"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      class="max-w-lg mx-auto space-y-6"
+    >
+      <input type="hidden" name="form-name" value="contact-main" />
+
+      <!-- Honeypot field -->
+      <p hidden>
+        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+      </p>
+
+      <input
+        type="text"
+        name="name"
+        placeholder="Your Name"
+        required
+        class="w-full bg-dark-light border border-border px-6 py-4 text-base text-grey-light focus:border-accent outline-none transition-colors rounded"
+      />
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Your Email"
+        required
+        class="w-full bg-dark-light border border-border px-6 py-4 text-base text-grey-light focus:border-accent outline-none transition-colors rounded"
+      />
+
+      <input
+        type="tel"
+        name="whatsapp"
+        placeholder="WhatsApp Number (with country code)"
+        required
+        class="w-full bg-dark-light border border-border px-6 py-4 text-base text-grey-light focus:border-accent outline-none transition-colors rounded"
+      />
+
+      <textarea
+        name="message"
+        placeholder="Your Message"
+        required
+        rows="6"
+        class="w-full bg-dark-light border border-border px-6 py-4 text-base text-grey-light focus:border-accent outline-none transition-colors rounded resize-none"
+      ></textarea>
+
+      <button
+        type="submit"
+        class="w-full md:w-auto inline-block border-2 border-accent px-12 py-5 text-base tracking-wide hover:bg-accent hover:text-dark transition-all duration-500 font-medium rounded"
+      >
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
+
+  <footer class="bg-dark-light text-grey py-20 md:py-32 border-t border-border">
+  <div class="container mx-auto px-6 lg:px-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-y-12 md:gap-x-12 lg:gap-x-24">
+
+      <div class="flex flex-col">
+        <a 
+          href="/" 
+          class="inline-flex items-baseline gap-2 text-2xl md:text-3xl tracking-widest mb-6"
+        >
+          <span class="font-mont font-bold text-white">GEMSHOTS</span>
+          <span class="font-mont font-light text-accent">PRO</span>
+        </a>
+
+        <p class="text-sm leading-relaxed max-w-xs">
+          Directed by 
+          <a 
+            href="https://www.instagram.com/designbyching/" 
+            class="text-white hover:text-accent transition-colors underline underline-offset-4 decoration-border" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >Mike Ching</a><br />
+          <span class="mt-1 block text-grey-dark">Designer, Photographer & Gem Hunter</span>
+          <a 
+            href="https://www.designbyching.com" 
+            class="hover:text-accent transition-colors block mt-2" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >www.designbyching.com</a>
+        </p>
+      </div>
+
+      <div class="md:pl-4">
+        <h4 class="font-display text-lg font-light mb-6 tracking-wide text-accent">
+          LINKS
+        </h4>
+        <ul class="space-y-4 text-sm">
+          <li><a href="/#services" class="hover:text-accent transition-colors">Services</a></li>
+          <li><a href="/#portfolio" class="hover:text-accent transition-colors">Portfolio</a></li>
+          <li><a href="/#process" class="hover:text-accent transition-colors">Process</a></li>
+          <li><a href="/#pricing" class="hover:text-accent transition-colors">Pricing</a></li>
+          <li><a href="/booking.html" class="hover:text-accent transition-colors">Book Session</a></li>
+          <li><a href="/contact.html" class="hover:text-accent transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-display text-lg font-light mb-6 tracking-wide text-accent">
+          CONTACT
+        </h4>
+        <div class="space-y-4 text-sm leading-relaxed">
+          <p>
+            <span class="block text-xs uppercase text-grey-dark mb-1">WhatsApp</span>
+            <a href="https://wa.me/61477726885" class="text-white hover:text-accent transition-colors">
+              +61 4777 26885
+            </a>
+          </p>
+          <p>
+            <span class="block text-xs uppercase text-grey-dark mb-1">Email</span>
+            <a href="mailto:mike@designbyching.com" class="text-white hover:text-accent transition-colors">
+              mike@designbyching.com
+            </a>
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mt-20 pt-10 border-t border-border/50 text-center text-xs text-grey-dark">
+      © 2026 GemShots Pro. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+    <!-- Gem Card Template - WHOLE CARD IS NOW CLICKABLE -->
+    <template id="gem-card-template">
+      <div
+        class="group flex flex-col h-full text-sm hover:-translate-y-1 transition duration-300 bg-dark-light rounded-lg overflow-hidden shadow-lg border border-border hover:border-accent cursor-pointer"
+      >
+        <a
+          href="#"
+          class="block h-full flex flex-col no-underline text-inherit"
+        >
+          <div class="relative aspect-[4/3] overflow-hidden">
+            <img
+              loading="lazy"
+              src=""
+              alt=""
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+            />
+            <div
+              class="sold-badge hidden absolute top-4 right-4 bg-accent text-dark px-3 py-1 text-xs font-medium rounded"
+            >
+              SOLD
+            </div>
+          </div>
+          <div class="p-6 flex flex-col space-y-2 flex-grow">
+            <p
+              class="text-xs tracking-wide text-grey uppercase font-medium text-center category"
+            ></p>
+            <h3
+              class="font-sans text-lg font-medium leading-tight group-hover:text-accent transition-colors text-white text-center name"
+            ></h3>
+            <div class="flex items-center justify-center mt-auto">
+              <p class="text-sm text-grey text-center specs"></p>
+            </div>
+            <span
+              class="block text-center text-sm font-medium text-grey group-hover:text-accent transition-colors mt-4"
+            >
+              View More →
+            </span>
+          </div>
+        </a>
+      </div>
+    </template>
+
+    <!-- Gem Detail Template -->
+    <template id="gem-detail-template">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+        <!-- Left column: Image + thumbnails -->
+        <div class="space-y-6 lg:space-y-8">
+          <div
+            class="aspect-[4/5] lg:aspect-[3/4] overflow-hidden bg-dark-light border border-border rounded-lg"
+          >
+            <img
+              id="main-media"
+              src=""
+              alt=""
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div
+            id="thumbnails"
+            class="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-5 gap-2 sm:gap-3"
+          >
+            <!-- Dynamic thumbnails -->
+          </div>
+        </div>
+
+        <!-- Right column: Text, specs, button -->
+        <div
+          class="flex flex-col justify-start space-y-6 lg:space-y-8 pt-2 lg:pt-0"
+        >
+          <p
+            class="text-xs tracking-wide text-grey uppercase font-medium category"
+          ></p>
+          <h1
+            class="font-display text-3xl sm:text-4xl lg:text-5xl font-light name text-white"
+          ></h1>
+          <p
+            class="sold-note hidden text-base font-medium text-grey uppercase tracking-wide"
+          >
+            SOLD
+          </p>
+
+          <!-- <p class="text-2xl sm:text-3xl font-medium text-white">
+            $<span class="price"></span> USD
+          </p> -->
+
+          <p
+            class="text-base sm:text-lg leading-relaxed text-grey description"
+          ></p>
+          <hr class="border-border my-6" />
+          <h2
+            class="font-display text-xl sm:text-2xl font-light uppercase tracking-wide text-accent"
+          >
+            Specifications
+          </h2>
+          <div
+            class="grid grid-cols-2 gap-x-8 gap-y-4 text-sm sm:text-base text-grey"
+          >
+            <div>
+              <span class="font-medium">Carat:</span>
+              <span class="carat"></span> ct
+            </div>
+            <div>
+              <span class="font-medium">Origin:</span>
+              <span class="origin"></span>
+            </div>
+            <div>
+              <span class="font-medium">Cut:</span> <span class="cut"></span>
+            </div>
+            <div>
+              <span class="font-medium">Clarity:</span>
+              <span class="clarity"></span>
+            </div>
+            <div>
+              <span class="font-medium">Treatment:</span>
+              <span class="treatment"></span>
+            </div>
+            <div>
+              <span class="font-medium">Certification:</span>
+              <span class="certification"></span>
+            </div>
+          </div>
+          <hr class="border-border my-8" />
+          <a
+  id="inquire-link"
+  href="/booking.html"
+  class="inline-block w-full border-2 border-accent px-8 py-4 sm:py-5 text-base sm:text-lg tracking-wide text-center hover:bg-accent hover:text-dark transition-all duration-300 font-medium text-accent"
+>
+  Book Similar Professional Shots
+</a>
+        </div>
+      </div>
+    </template>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>
