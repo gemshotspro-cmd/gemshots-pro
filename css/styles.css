@@ -28,6 +28,19 @@
   pointer-events: none;
 }
 
+/* Editorial section labels (pair with text-grey) */
+.section-eyebrow {
+  font-size: 0.6875rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .section-eyebrow {
+    font-size: 0.75rem;
+  }
+}
+
 /* Smooth scroll */
 html {
   scroll-behavior: smooth;
@@ -47,15 +60,15 @@ body.menu-open {
   @apply opacity-100 border-accent;
 }
 
-/* Subtle but clearly visible tech micro-grid for dark backgrounds */
+/* Barely-there grid — studio-quiet; keeps depth without visual noise */
 .bg-dark,
 .bg-dark\/90,
 .bg-dark-light\/50 {
   background-color: #0a0a0a; /* fallback */
   background-image:
-    linear-gradient(rgba(180, 180, 220, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(180, 180, 220, 0.07) 1px, transparent 1px);
-  background-size: 6px 6px;
+    linear-gradient(rgba(200, 200, 210, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(200, 200, 210, 0.028) 1px, transparent 1px);
+  background-size: 10px 10px;
   background-position: center center;
 }
 

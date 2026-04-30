@@ -11,54 +11,13 @@
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Custom Tailwind config -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ["Inter", "system-ui", "sans-serif"],
-              display: ["PP Mori", "sans-serif"],
-              mont: ["Montserrat", "sans-serif"],
-            },
-            colors: {
-              dark: { DEFAULT: "#0a0a0a", light: "#1a1a1a" },
-              grey: { DEFAULT: "#a0a0a0", dark: "#606060", light: "#d0d0d0" },
-              accent: "#ffdf01",
-              "accent-dark": "#009955",
-              border: "#303030",
-            },
-            spacing: {
-              18: "4.5rem",
-              22: "5.5rem",
-              30: "7.5rem",
-              36: "9rem",
-            },
-            letterSpacing: { wide: "0.05em" },
-            animation: {
-              "fade-in": "fadeIn 1s ease-out forwards",
-            },
-            keyframes: {
-              fadeIn: {
-                "0%": { opacity: "0" },
-                "100%": { opacity: "1" },
-              },
-            },
-          },
-        },
-      };
-    </script>
+    <script src="/js/tailwind-theme.js"></script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&family=Montserrat:wght@300;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -66,45 +25,45 @@
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
 
-  <body class="bg-dark text-grey-light antialiased">
+  <body class="bg-dark text-grey-light antialiased text-sm md:text-base font-light">
     <!-- Header -->
     <header
       class="fixed top-0 left-0 right-0 z-50 bg-dark/90 backdrop-blur-md border-b border-border"
     >
       <div class="container mx-auto px-6 lg:px-12">
-        <div class="flex items-center justify-between h-20">
+        <div class="flex items-center justify-between h-16">
           <a
             href="/"
-            class="text-xl lg:text-2xl font-mont tracking-widest flex items-baseline gap-2"
+            class="text-base lg:text-lg font-mont tracking-[0.2em] flex items-baseline gap-2"
           >
-            <span class="font-bold text-white">GEMSHOTS</span>
+            <span class="font-semibold text-white">GEMSHOTS</span>
             <span class="font-light text-accent">PRO</span>
           </a>
 
-          <nav class="hidden md:flex items-center space-x-12">
+          <nav class="hidden md:flex items-center gap-8">
             <a
               href="/#services"
-              class="text-sm tracking-wide hover:text-accent transition-colors"
+              class="text-xs uppercase tracking-widest text-grey-light hover:text-accent transition-colors"
               >Services</a
             >
             <a
               href="/#portfolio"
-              class="text-sm tracking-wide hover:text-accent transition-colors"
+              class="text-xs uppercase tracking-widest text-grey-light hover:text-accent transition-colors"
               >Portfolio</a
             >
             <a
               href="/#process"
-              class="text-sm tracking-wide hover:text-accent transition-colors"
+              class="text-xs uppercase tracking-widest text-grey-light hover:text-accent transition-colors"
               >Process</a
             >
             <a
               href="/#pricing"
-              class="text-sm tracking-wide hover:text-accent transition-colors"
+              class="text-xs uppercase tracking-widest text-grey-light hover:text-accent transition-colors"
               >Pricing</a
             >
             <a
               href="/contact.html"
-              class="text-sm tracking-wide hover:text-accent transition-colors"
+              class="text-xs uppercase tracking-widest text-grey-light hover:text-accent transition-colors"
               >Contact</a
             >
           </nav>
@@ -132,10 +91,10 @@
     <!-- Mobile Menu -->
     <div
       id="mobile-menu"
-      class="fixed inset-0 bg-dark z-40 transform translate-x-full transition-transform duration-500 ease-in-out md:hidden flex items-center justify-center pt-48"
+      class="fixed inset-0 bg-dark z-40 transform translate-x-full transition-transform duration-500 ease-in-out md:hidden flex items-center justify-center pt-28"
     >
       <nav
-        class="flex flex-col items-center space-y-12 text-3xl font-light text-grey-light"
+        class="flex flex-col items-center space-y-8 text-lg font-light text-grey-light uppercase tracking-widest"
       >
         <a href="/#services" class="hover:text-accent transition-colors"
           >Services</a
@@ -156,19 +115,19 @@
     </div>
 
     <!-- Main Content -->
-    <main class="pt-24 md:pt-28 lg:pt-32 pb-20">
-      <section class="py-20 md:py-32">
+    <main class="pt-20 md:pt-24 lg:pt-28 pb-16 md:pb-20">
+      <section class="py-12 md:py-20">
         <div class="container mx-auto px-6 lg:px-12 max-w-4xl">
-          <div class="text-center mb-16">
-            <p class="text-sm tracking-wide text-grey uppercase mb-6">
+          <div class="text-center mb-12 md:mb-14">
+            <p class="section-eyebrow text-grey mb-5">
               BOOK YOUR SESSION
             </p>
             <h1
-              class="font-display text-5xl md:text-6xl lg:text-7xl font-light text-white leading-tight"
+              class="font-display text-3xl md:text-5xl lg:text-6xl font-light tracking-tight text-white leading-[1.08]"
             >
               Reserve Your <span class="text-accent">Gem Capture</span> Today
             </h1>
-            <p class="mt-6 text-lg md:text-xl text-grey max-w-3xl mx-auto">
+            <p class="mt-5 text-sm md:text-base text-grey/90 max-w-2xl mx-auto leading-relaxed">
               Professional macro photography, 360° videos and digital assets
               tailored for your precious gemstones.
             </p>
@@ -180,7 +139,7 @@
             data-netlify="true"
             netlify-honeypot="bot-field"
             action="/thankyou.html"
-            class="max-w-2xl mx-auto space-y-8"
+            class="max-w-2xl mx-auto space-y-6"
           >
             <input type="hidden" name="form-name" value="booking" />
 
@@ -196,14 +155,14 @@
                 name="name"
                 placeholder="Your Name"
                 required
-                class="w-full bg-dark-light border border-border px-6 py-4 text-base text-grey-light focus:border-accent outline-none transition-colors rounded"
+                class="w-full bg-dark-light border border-border px-5 py-3.5 text-sm text-grey-light focus:border-accent outline-none transition-colors rounded"
               />
               <input
                 type="email"
                 name="email"
                 placeholder="Your Email"
                 required
-                class="w-full bg-dark-light border border-border px-6 py-4 text-base text-grey-light focus:border-accent outline-none transition-colors rounded"
+                class="w-full bg-dark-light border border-border px-5 py-3.5 text-sm text-grey-light focus:border-accent outline-none transition-colors rounded"
               />
             </div>
 
@@ -212,7 +171,7 @@
               name="phone"
               placeholder="Your Phone (WhatsApp preferred)"
               required
-              class="w-full bg-dark-light border border-border px-6 py-4 text-base text-grey-light focus:border-accent outline-none transition-colors rounded"
+              class="w-full bg-dark-light border border-border px-5 py-3.5 text-sm text-grey-light focus:border-accent outline-none transition-colors rounded"
             />
 
             <div class="grid md:grid-cols-2 gap-6">
@@ -220,7 +179,7 @@
                 id="package-select"
                 name="package"
                 required
-                class="w-full bg-dark-light border border-border px-6 py-4 pr-12 text-base text-grey-light focus:border-accent outline-none transition-colors rounded appearance-none"
+                class="w-full bg-dark-light border border-border px-5 py-3.5 pr-12 text-sm text-grey-light focus:border-accent outline-none transition-colors rounded appearance-none"
               >
                 <option value="" disabled selected>Select Package</option>
                 <option value="basic">Basic Suite – LKR 5,000 / stone</option>
@@ -243,7 +202,7 @@
                 placeholder="Number of Stones"
                 min="1"
                 required
-                class="w-full bg-dark-light border border-border px-6 py-4 text-base text-grey-light focus:border-accent outline-none transition-colors rounded [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+                class="w-full bg-dark-light border border-border px-5 py-3.5 text-sm text-grey-light focus:border-accent outline-none transition-colors rounded [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
               />
             </div>
 
@@ -252,24 +211,24 @@
               rows="6"
               placeholder="Additional details, preferred shooting date/time, gem types, quantity estimate or special requests..."
               required
-              class="w-full bg-dark-light border border-border px-6 py-4 text-base text-grey-light focus:border-accent outline-none transition-colors rounded resize-none"
+              class="w-full bg-dark-light border border-border px-5 py-3.5 text-sm text-grey-light focus:border-accent outline-none transition-colors rounded resize-none"
             ></textarea>
 
-            <div class="bg-dark-light/50 border border-border p-8 rounded-xl">
-              <h3 class="font-display text-2xl font-light mb-6 text-accent">
+            <div class="bg-dark-light/40 border border-border/80 p-6 rounded-md">
+              <h3 class="font-display text-lg font-light mb-4 text-accent">
                 Shoot Preparation Checklist
               </h3>
-              <p class="text-grey mb-6">
+              <p class="text-sm text-grey/90 mb-4 leading-relaxed">
                 For the best possible results, please confirm you've prepared:
               </p>
-              <ul class="space-y-4 text-grey">
+              <ul class="space-y-3 text-sm text-grey/90 leading-relaxed">
                 <li class="flex items-start">
                   <input
                     type="checkbox"
                     id="cleaned"
                     class="mt-1 mr-4 w-5 h-5 accent-accent"
                   />
-                  <label for="cleaned" class="text-base"
+                  <label for="cleaned" class="text-sm leading-snug"
                     >Stones cleaned and free of dust, oil or fingerprints</label
                   >
                 </li>
@@ -279,7 +238,7 @@
                     id="sorted"
                     class="mt-1 mr-4 w-5 h-5 accent-accent"
                   />
-                  <label for="sorted" class="text-base"
+                  <label for="sorted" class="text-sm leading-snug"
                     >Stones sorted by quality/type for efficient shooting
                     order</label
                   >
@@ -290,7 +249,7 @@
                     id="secure"
                     class="mt-1 mr-4 w-5 h-5 accent-accent"
                   />
-                  <label for="secure" class="text-base"
+                  <label for="secure" class="text-sm leading-snug"
                     >Secure, well-ventilated location with space for studio
                     setup</label
                   >
@@ -301,7 +260,7 @@
                     id="details"
                     class="mt-1 mr-4 w-5 h-5 accent-accent"
                   />
-                  <label for="details" class="text-base"
+                  <label for="details" class="text-sm leading-snug"
                     >Gem details (carat, origin, treatment, certification) ready
                     for reference</label
                   >
@@ -312,7 +271,7 @@
                     id="branding"
                     class="mt-1 mr-4 w-5 h-5 accent-accent"
                   />
-                  <label for="branding" class="text-base"
+                  <label for="branding" class="text-sm leading-snug"
                     >Branding elements (logo, watermark preferences) provided if
                     desired</label
                   >
@@ -322,13 +281,13 @@
 
             <button
               type="submit"
-              class="w-full border-2 border-accent px-12 py-6 text-lg tracking-wide hover:bg-accent hover:text-dark transition-all duration-500 font-medium rounded"
+              class="w-full border border-accent px-10 py-3.5 text-sm uppercase tracking-widest hover:bg-accent hover:text-dark transition-all duration-300 font-medium rounded"
             >
               Submit Booking Request
             </button>
           </form>
 
-          <div class="text-center mt-16 text-grey text-sm leading-relaxed">
+          <div class="text-center mt-12 text-grey/90 text-xs md:text-sm leading-relaxed max-w-xl mx-auto">
             <p>
               <strong>Session / Call-out Fee:</strong> LKR 20,000 (fixed per
               session). Waived for Elite 10 Bundle.
@@ -344,21 +303,21 @@
 
     <!-- Footer -->
     <footer
-      class="bg-dark-light text-grey py-20 md:py-32 border-t border-border"
+      class="bg-dark-light text-grey py-14 md:py-20 border-t border-border/80"
     >
       <div class="container mx-auto px-6 lg:px-12">
         <div
-          class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16 text-center md:text-left"
+          class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 text-center md:text-left"
         >
           <div>
             <a
               href="/"
-              class="inline-flex items-baseline gap-2 text-2xl md:text-3xl tracking-widest mb-5 md:mb-6"
+              class="inline-flex items-baseline gap-2 text-lg md:text-xl tracking-[0.18em] mb-5"
             >
-              <span class="font-mont font-bold text-white">GEMSHOTS</span>
+              <span class="font-mont font-semibold text-white">GEMSHOTS</span>
               <span class="font-mont font-light text-accent">PRO</span>
             </a>
-            <p class="text-sm leading-relaxed">
+            <p class="text-xs leading-relaxed text-grey/90 max-w-xs mx-auto md:mx-0">
               Directed by
               <a
                 href="https://www.instagram.com/designbyching/"
@@ -380,11 +339,11 @@
 
           <div>
             <h4
-              class="font-display text-lg font-light mb-6 tracking-wide text-accent"
+              class="section-eyebrow text-accent mb-4"
             >
               LINKS
             </h4>
-            <ul class="space-y-3 text-sm">
+            <ul class="space-y-2.5 text-xs">
               <li>
                 <a href="/#services" class="hover:text-accent transition-colors"
                   >Services</a
@@ -409,6 +368,13 @@
               </li>
               <li>
                 <a
+                  href="/booking.html"
+                  class="hover:text-accent transition-colors"
+                  >Book Session</a
+                >
+              </li>
+              <li>
+                <a
                   href="/contact.html"
                   class="hover:text-accent transition-colors"
                   >Contact</a
@@ -419,27 +385,33 @@
 
           <div>
             <h4
-              class="font-display text-lg font-light mb-6 tracking-wide text-accent"
+              class="section-eyebrow text-accent mb-4"
             >
               CONTACT
             </h4>
-            <p class="text-sm leading-relaxed">
-              <a
-                href="https://wa.me/61477726885"
-                class="hover:text-accent transition-colors"
-                >WhatsApp: +61 4777 26885</a
-              ><br />
-              <a
-                href="mailto:mike@designbyching.com"
-                class="hover:text-accent transition-colors"
-                >mike@designbyching.com</a
-              >
-            </p>
+            <div class="space-y-3 text-xs leading-relaxed">
+              <p>
+                <span class="block text-[10px] uppercase tracking-widest text-grey-dark mb-1">WhatsApp</span>
+                <a
+                  href="https://wa.me/61477726885"
+                  class="text-white hover:text-accent transition-colors"
+                  >+61 4777 26885</a
+                >
+              </p>
+              <p>
+                <span class="block text-[10px] uppercase tracking-widest text-grey-dark mb-1">Email</span>
+                <a
+                  href="mailto:mike@designbyching.com"
+                  class="text-white hover:text-accent transition-colors"
+                  >mike@designbyching.com</a
+                >
+              </p>
+            </div>
           </div>
         </div>
 
         <div
-          class="mt-16 pt-10 border-t border-border text-center text-xs text-grey-dark"
+          class="mt-12 pt-8 border-t border-border/40 text-center text-[11px] text-grey-dark tracking-wide"
         >
           © 2026 GemShots Pro. All rights reserved.
         </div>

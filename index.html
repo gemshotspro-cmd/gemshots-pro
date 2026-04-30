@@ -13,86 +13,38 @@
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Custom Tailwind config -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ["Inter", "system-ui", "sans-serif"],
-              display: ["PP Mori", "sans-serif"],
-              mont: ["Montserrat", "sans-serif"],
-            },
-            colors: {
-              dark: { DEFAULT: "#0a0a0a", light: "#1a1a1a" },
-              grey: { DEFAULT: "#a0a0a0", dark: "#606060", light: "#d0d0d0" },
-              accent: "#ffdf01",
-              "accent-dark": "#009955",
-              border: "#303030",
-            },
-            spacing: { 
-              18: "4.5rem", 
-              22: "5.5rem", 
-              30: "7.5rem", 
-              36: "9rem" 
-            },
-            letterSpacing: { 
-              wide: "0.05em" 
-            },
-            animation: {
-              "fade-in": "fadeIn 1s ease-out forwards",
-              "infinite-scroll": "infinite-scroll 8s linear infinite",
-            },
-            keyframes: {
-              fadeIn: {
-                "0%": { opacity: "0" },
-                "100%": { opacity: "1" },
-              },
-              "infinite-scroll": {
-                "0%":   { transform: "translateX(0)" },
-                "100%": { transform: "translateX(-99%)" }
-              }
-            }
-          }
-        }
-      };
-    </script>
+    <script src="/js/tailwind-theme.js"></script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link 
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" 
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&family=Montserrat:wght@300;600;700&display=swap"
       rel="stylesheet"
     />
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
-  <body class="bg-dark text-grey-light antialiased">
+  <body class="bg-dark text-grey-light antialiased text-sm md:text-base font-light">
     <!-- Header -->
     <header
       class="fixed top-0 left-0 right-0 z-50 bg-dark/90 backdrop-blur-md border-b border-border"
     >
       <div class="container mx-auto px-6 lg:px-12">
-        <div class="flex items-center justify-between h-20">
-          <a href="/" class="text-xl lg:text-2xl font-mont tracking-widest flex items-baseline gap-2">
-            <span class="font-bold text-white">GEMSHOTS</span>
+        <div class="flex items-center justify-between h-16">
+          <a href="/" class="text-base lg:text-lg font-mont tracking-[0.2em] flex items-baseline gap-2">
+            <span class="font-semibold text-white">GEMSHOTS</span>
             <span class="font-light text-accent">PRO</span>
           </a>
 
           <!-- Desktop Nav -->
-          <nav class="hidden md:flex items-center space-x-12">
-            <a href="#services" class="text-sm tracking-wide hover:text-accent transition-colors">Services</a>
-            <a href="#portfolio" class="text-sm tracking-wide hover:text-accent transition-colors">Portfolio</a>
-            <a href="#process" class="text-sm tracking-wide hover:text-accent transition-colors">Process</a>
-            <a href="#pricing" class="text-sm tracking-wide hover:text-accent transition-colors">Pricing</a>
-            <a href="#contact" class="text-sm tracking-wide hover:text-accent transition-colors">Contact</a>
+          <nav class="hidden md:flex items-center gap-8">
+            <a href="#services" class="text-xs uppercase tracking-widest text-grey-light hover:text-accent transition-colors">Services</a>
+            <a href="#portfolio" class="text-xs uppercase tracking-widest text-grey-light hover:text-accent transition-colors">Portfolio</a>
+            <a href="#process" class="text-xs uppercase tracking-widest text-grey-light hover:text-accent transition-colors">Process</a>
+            <a href="#pricing" class="text-xs uppercase tracking-widest text-grey-light hover:text-accent transition-colors">Pricing</a>
+            <a href="#contact" class="text-xs uppercase tracking-widest text-grey-light hover:text-accent transition-colors">Contact</a>
           </nav>
 
           <!-- Hamburger Button -->
@@ -113,9 +65,9 @@
     <!-- Mobile Menu Overlay -->
     <div
       id="mobile-menu"
-      class="fixed inset-0 bg-dark z-40 transform translate-x-full transition-transform duration-500 ease-in-out md:hidden flex items-center justify-center pt-48"
+      class="fixed inset-0 bg-dark z-40 transform translate-x-full transition-transform duration-500 ease-in-out md:hidden flex items-center justify-center pt-28"
     >
-      <nav class="flex flex-col items-center space-y-12 text-3xl font-light text-grey-light">
+      <nav class="flex flex-col items-center space-y-8 text-lg font-light text-grey-light uppercase tracking-widest">
         <a href="#services" class="hover:text-accent transition-colors">Services</a>
         <a href="#portfolio" class="hover:text-accent transition-colors">Portfolio</a>
         <a href="#process" class="hover:text-accent transition-colors">Process</a>
@@ -125,22 +77,24 @@
     </div>
 
     <!-- Hero -->
-    <section id="hero" class="relative min-h-screen flex flex-col bg-dark overflow-hidden pt-20 md:pt-24 lg:pt-28">
+    <section id="hero" class="relative min-h-screen flex flex-col bg-dark overflow-hidden pt-16 md:pt-20 lg:pt-24">
       <div class="relative z-10 flex-grow flex items-center justify-center">
-        <div class="container mx-auto px-6 lg:px-12 text-center py-12 md:py-16 lg:py-20">
-          <p class="text-sm md:text-base tracking-wide text-gray-200 uppercase mb-6 md:mb-10 animate-fade-in">
+        <div class="container mx-auto px-6 lg:px-12 text-center py-10 md:py-12 lg:py-16">
+          <p class="section-eyebrow text-gray-200/90 mb-5 md:mb-8 animate-fade-in">
             DIGITAL GEM TRANSFORMATION
           </p>
 
-          <h1 class="font-display text-4xl md:text-6xl lg:text-7xl font-light leading-tight mb-10 md:mb-14 lg:mb-16 text-white animate-fade-in [animation-delay:0.2s]">
+          <h1 class="font-display text-3xl md:text-5xl lg:text-6xl font-light leading-[1.08] tracking-tight mb-8 md:mb-11 lg:mb-14 text-white animate-fade-in [animation-delay:0.2s]">
             Capture <span class="text-accent">Brilliance</span><br />
             Sell Faster
           </h1>
 
           <!-- Carousel -->
-          <div class="w-full max-w-6xl mx-auto mb-12 md:mb-16 lg:mb-20">
+          <div class="w-full max-w-6xl mx-auto mb-10 md:mb-12 lg:mb-16">
             <div class="relative overflow-hidden rounded-xl">
-              <div class="flex animate-infinite-scroll hover:[animation-play-state:paused] whitespace-nowrap">
+              <div
+                class="flex w-max flex-nowrap animate-infinite-scroll hover:[animation-play-state:paused] whitespace-nowrap [will-change:transform]"
+              >
                 <!-- First set -->
                 <div class="flex shrink-0">
                   <div class="w-56 h-56 md:w-64 lg:w-72 lg:h-72 flex-shrink-0 mx-3 md:mx-4 lg:mx-6">
@@ -188,14 +142,14 @@
             </div>
           </div>
 
-          <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-12 md:mb-16 leading-relaxed animate-fade-in [animation-delay:0.4s]">
+          <p class="text-sm md:text-base text-grey/90 max-w-2xl mx-auto mb-10 md:mb-12 leading-relaxed animate-fade-in [animation-delay:0.4s]">
             Professional photography, videos, and digital services to transform
             your gem inventory into high-converting online assets.
           </p>
 
-          <a href="#services"
-             class="inline-block border-2 border-accent px-10 py-4 md:px-12 md:py-5 text-sm md:text-base tracking-wide text-white hover:bg-accent hover:text-dark transition-all duration-500 animate-fade-in [animation-delay:0.6s]">
-            EXPLORE SERVICES
+          <a href="/booking.html"
+          class="inline-block border border-accent px-8 py-3 md:px-10 md:py-3.5 text-xs uppercase tracking-[0.2em] text-white hover:bg-accent hover:text-dark transition-all duration-500 animate-fade-in [animation-delay:0.6s]">
+            BOOK A PROJECT
           </a>
         </div>
       </div>
@@ -203,111 +157,27 @@
 
 
 
-    <!-- Services Section -->
-    <section id="services" class="py-32 md:py-40 bg-dark">
-      <div class="container mx-auto px-6 lg:px-12">
-        <div class="text-center mb-16 md:mb-24">
-  <p class="text-sm tracking-wide text-grey uppercase mb-6">
-    OUR SERVICES
-  </p>
-  <h2 class="font-display text-3xl md:text-5xl font-light text-white mb-6 md:mb-8">
-    Gem Digital Transformation
-  </h2>
-  <p class="text-base md:text-lg text-grey max-w-3xl mx-auto leading-relaxed">
-    Directed by Mike Ching of <a href="https://www.designbyching.com" class="text-accent hover:underline transition-colors" target="_blank" rel="noopener noreferrer">Design by Ching</a> - A Sydney-based creative with 15 years of experience in brand identity and web design. Mike brings a designer’s eye and professional precision to GemShots Pro, ensuring every gemstone is captured with world-class quality and storytelling.
-  </p>
-</div>
-
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12"
-        >
-          <div
-            class="p-8 border border-border rounded-lg hover:border-accent transition-colors"
-          >
-            <h3 class="font-display text-xl font-light mb-4 text-accent">
-              Gem Photography
-            </h3>
-            <p class="text-grey">
-              High-definition macro shots capturing color, clarity, and fire for
-              your precious gem stones.
-            </p>
-          </div>
-          <div
-            class="p-8 border border-border rounded-lg hover:border-accent transition-colors"
-          >
-            <h3 class="font-display text-xl font-light mb-4 text-accent">
-              Video Reels
-            </h3>
-            <p class="text-grey">
-              Dynamic 360° videos and short reels for social media and whatsapp sharing.
-            </p>
-          </div>
-          <div
-            class="p-8 border border-border rounded-lg hover:border-accent transition-colors"
-          >
-            <h3 class="font-display text-xl font-light mb-4 text-accent">
-              Online Shop Setup
-            </h3>
-            <p class="text-grey">
-              Custom digital galleries and e-commerce integration for your gem inventory.
-            </p>
-          </div>
-          <div
-            class="p-8 border border-border rounded-lg hover:border-accent transition-colors"
-          >
-            <h3 class="font-display text-xl font-light mb-4 text-accent">
-              Social Media Content
-            </h3>
-            <p class="text-grey">
-              Ready-to-post images and videos optimized for faster loading speeds.
-            </p>
-          </div>
-          <div
-            class="p-8 border border-border rounded-lg hover:border-accent transition-colors"
-          >
-            <h3 class="font-display text-xl font-light mb-4 text-accent">
-              Digital Asset Management
-            </h3>
-            <p class="text-grey">
-              Cloud-based organization and digital asset management for your gem
-              collections.
-            </p>
-          </div>
-          <div
-            class="p-8 border border-border rounded-lg hover:border-accent transition-colors"
-          >
-            <h3 class="font-display text-xl font-light mb-4 text-accent">
-              Gem Hunting
-            </h3>
-            <p class="text-grey">
-                Sourcing rare gemstones from certified suppliers with authenticity verification and competitive pricing.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- Portfolio Section -->
-    <section id="portfolio" class="py-32 md:py-40 bg-dark-light/50">
+    <section id="portfolio" class="py-20 md:py-28 lg:py-32 bg-dark-light/50">
       <div class="container mx-auto px-6 lg:px-12">
-        <div class="text-center mb-16 md:mb-24">
-          <p class="text-sm tracking-wide text-grey uppercase mb-6">OUR WORK</p>
-          <h2 class="font-display text-3xl md:text-5xl font-light text-white">
+        <div class="text-center mb-12 md:mb-20">
+          <p class="section-eyebrow text-grey mb-5 md:mb-6">OUR WORK</p>
+          <h2 class="font-display text-2xl md:text-4xl font-light tracking-tight text-white">
             Portfolio
           </h2>
         </div>
 
         <div
           id="gem-grid"
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10"
         >
           <!-- Dynamic portfolio items here -->
         </div>
 
-        <div class="text-center mt-16 md:mt-24">
+        <div class="text-center mt-12 md:mt-16">
           <button
             id="view-all"
-            class="text-sm md:text-base tracking-wide hover:text-accent transition-colors"
+            class="text-xs uppercase tracking-widest text-grey-light hover:text-accent transition-colors"
           >
             View More →
           </button>
@@ -315,47 +185,256 @@
       </div>
     </section>
 
-    <!-- Gem Detail Section (Hidden Initially) -->
-    <section id="gem-detail" class="hidden py-32 md:py-40 bg-dark-light/50">
+    <!-- Services Section -->
+    <section id="services" class="py-20 md:py-28 lg:py-32 bg-dark">
       <div class="container mx-auto px-6 lg:px-12">
-        <div id="detail-content" class="w-full mb-24">
+        <div class="text-center mb-12 md:mb-20">
+  <p class="section-eyebrow text-grey mb-5 md:mb-6">
+    OUR SERVICES
+  </p>
+  <h2 class="font-display text-2xl md:text-4xl font-light tracking-tight text-white mb-6 md:mb-8">
+    Gem Digital Transformation
+  </h2>
+  <p class="text-sm md:text-base text-grey/90 max-w-2xl mx-auto leading-relaxed">
+    Directed by Mike Ching of <a href="https://www.designbyching.com" class="text-accent hover:underline transition-colors" target="_blank" rel="noopener noreferrer">Design by Ching</a> - A Sydney-based creative with 15 years of experience in brand identity and web design. Mike brings a designer’s eye and professional precision to GemShots Pro, ensuring every gemstone is captured with world-class quality and storytelling.
+  </p>
+</div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10"
+        >
+          <div
+            class="p-6 border border-border/80 rounded-md hover:border-accent/90 transition-colors"
+          >
+            <h3 class="font-display text-lg font-light mb-3 text-accent">
+              Gem Photography
+            </h3>
+            <p class="text-sm text-grey/90 leading-relaxed">
+              High-definition macro shots capturing color, clarity, and fire for
+              your precious gem stones.
+            </p>
+          </div>
+          <div
+            class="p-6 border border-border/80 rounded-md hover:border-accent/90 transition-colors"
+          >
+            <h3 class="font-display text-lg font-light mb-3 text-accent">
+              Video Reels
+            </h3>
+            <p class="text-sm text-grey/90 leading-relaxed">
+              Dynamic 360° videos and short reels for social media and whatsapp sharing.
+            </p>
+          </div>
+          <div
+            class="p-6 border border-border/80 rounded-md hover:border-accent/90 transition-colors"
+          >
+            <h3 class="font-display text-lg font-light mb-3 text-accent">
+              Online Shop Setup
+            </h3>
+            <p class="text-sm text-grey/90 leading-relaxed">
+              Custom digital galleries and e-commerce integration for your gem inventory.
+            </p>
+          </div>
+          <div
+            class="p-6 border border-border/80 rounded-md hover:border-accent/90 transition-colors"
+          >
+            <h3 class="font-display text-lg font-light mb-3 text-accent">
+              Social Media Content
+            </h3>
+            <p class="text-sm text-grey/90 leading-relaxed">
+              Ready-to-post images and videos optimized for faster loading speeds.
+            </p>
+          </div>
+          <div
+            class="p-6 border border-border/80 rounded-md hover:border-accent/90 transition-colors"
+          >
+            <h3 class="font-display text-lg font-light mb-3 text-accent">
+              Digital Asset Management
+            </h3>
+            <p class="text-sm text-grey/90 leading-relaxed">
+              Cloud-based organization and digital asset management for your gem
+              collections.
+            </p>
+          </div>
+          <div
+            class="p-6 border border-border/80 rounded-md hover:border-accent/90 transition-colors"
+          >
+            <h3 class="font-display text-lg font-light mb-3 text-accent">
+              Gem Hunting
+            </h3>
+            <p class="text-sm text-grey/90 leading-relaxed">
+                Sourcing rare gemstones from certified suppliers with authenticity verification and competitive pricing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gem Detail Section (Hidden Initially) -->
+    <section id="gem-detail" class="hidden py-20 md:py-28 lg:py-32 bg-dark-light/50">
+      <div class="container mx-auto px-6 lg:px-12">
+        <div id="detail-content" class="w-full mb-16">
           <!-- Dynamic detail content here -->
         </div>
-        <div class="text-center mb-16">
-          <h2 class="font-display text-3xl md:text-4xl font-light text-white">
+        <div class="text-center mb-12">
+          <h2 class="font-display text-2xl md:text-3xl font-light tracking-tight text-white">
             More From Our Portfolio
           </h2>
         </div>
         <div
           id="related-grid"
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10"
         >
           <!-- Dynamic related portfolio items here -->
         </div>
       </div>
     </section>
 
-    <!-- Process Section -->
-    <section id="process" class="py-32 md:py-40 bg-dark">
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 md:py-28 lg:py-32 bg-dark-light/50">
       <div class="container mx-auto px-6 lg:px-12">
-        <div class="text-center mb-16 md:mb-24">
-      <p class="text-sm tracking-wide text-grey uppercase mb-6 font-medium">
+        <div class="text-center mb-12 md:mb-20">
+          <p class="section-eyebrow text-grey mb-5 md:mb-6">
+            OUR PLANS
+          </p>
+          <h2 class="font-display text-2xl md:text-4xl font-light tracking-tight text-white">
+            Pricing
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          <div
+            class="p-6 border border-border/80 rounded-md hover:border-accent/80 transition-colors text-center relative"
+            data-tier="basic"
+          >
+            <h3 class="font-display text-xl md:text-2xl font-light mb-4 text-accent">
+              Basic Suite
+            </h3>
+            <p class="text-xl font-semibold text-white mb-5 price-container">
+              <span class="current-price" data-original-price="5000">LKR 5,000</span> <span class="text-xs text-grey">/stone</span>
+              <del class="original-price hidden ml-2 text-grey text-xl"></del>
+            </p>
+            <span class="discount-badge hidden absolute top-4 right-4 bg-accent text-dark px-3 py-1 text-xs font-medium rounded">Save 0%</span>
+            <ul class="space-y-3 text-sm text-grey/90 leading-relaxed mb-6 text-left">
+              <li>4 x Focus-Stacked Images of your gem stone: Multi-angle "Hero" shots (Table, Pavilion, Side).</li>
+              <li>1 x Tweezer Macro Video: 4K manual rotation to show "life" and fire.</li>
+              <li>Standard Post-Processing: Professional color grading and dust removal.</li>
+              <li>Browser-Ready Delivery: Optimized files for instant WhatsApp sending and fast web loading.</li>
+              <li>Technical Edge: Captured with Nikon Z6ii + Nikkor Z 105mm Macro.</li>
+            </ul>
+            <a
+              href="/booking.html?package=basic"
+              class="inline-block border border-accent px-6 py-2.5 text-xs uppercase tracking-widest hover:bg-accent hover:text-dark transition-colors"
+              >Get Started</a
+            >
+          </div>
+          <div
+            class="p-6 border border-accent rounded-md bg-dark-light/70 hover:border-accent transition-colors text-center relative"
+            data-tier="pro"
+          >
+            <div class="mb-5 text-center">
+  <h3 class="font-display text-xl md:text-2xl font-light text-accent">
+    Pro Suite
+  </h3>
+  <span class="inline-block mt-2 px-3 py-1 text-[10px] uppercase tracking-wider font-medium text-cyan-300/90 bg-cyan-500/15 border border-cyan-500/30 rounded-full">
+    Most Popular
+  </span>
+</div>
+            <p class="text-xl font-semibold text-white mb-5 price-container">
+              <span class="current-price" data-original-price="10000">LKR 10,000</span> <span class="text-xs text-grey">/stone</span>
+              <del class="original-price hidden ml-2 text-grey text-xl"></del>
+            </p>
+            <span class="discount-badge hidden absolute top-4 right-4 bg-accent text-dark px-3 py-1 text-xs font-medium rounded">Save 0%</span>
+            <ul class="space-y-3 text-sm text-grey/90 leading-relaxed mb-6 text-left">
+              <li>Includes Everything in the Basic Suite +</li>
+              <li>1 x 4K 360° Turntable Video: A perfectly centered, motorized rotation showing edge-to-edge brilliance and symmetry.</li>
+              <li>Enhanced Retouching: Micro-level pixel cleaning for a flawless digital presence.</li>
+              <li>Designer Branding: High-fidelity watermark/logo placement.</li>
+            </ul>
+            <a
+              href="/booking.html?package=pro"
+              class="inline-block border border-accent px-6 py-2.5 text-xs uppercase tracking-widest bg-accent text-dark hover:bg-transparent hover:text-accent transition-colors"
+              >Get Started</a
+            >
+          </div>
+          <div
+            class="p-6 border border-border/80 rounded-md hover:border-accent/80 transition-colors text-center relative"
+            data-tier="premium"
+          >
+            <h3 class="font-display text-xl md:text-2xl font-light mb-4 text-accent">
+              Premium Suite
+            </h3>
+            <p class="text-xl font-semibold text-white mb-5 price-container">
+              <span class="current-price" data-original-price="20000">LKR 20,000</span> <span class="text-xs text-grey">/stone</span>
+              <del class="original-price hidden ml-2 text-grey text-xl"></del>
+            </p>
+            <span class="discount-badge hidden absolute top-4 right-4 bg-accent text-dark px-3 py-1 text-xs font-medium rounded">Save 0%</span>
+            <ul class="space-y-3 text-sm text-grey/90 leading-relaxed mb-6 text-left">
+              <li>Includes Everything in the Pro Suite +</li>
+              <li>Deep-Stack Engineering: Extra-deep focus stacking for absolute edge-to-edge clarity on complex cuts.</li>
+              <li>Elite Color Matching: Rigorous calibration to match the exact hue and saturation required for international certification standards.</li>
+              <li>Priority Post-Production: Advanced masking and lighting adjustments to highlight internal characteristics.</li>
+              <li>Marketing-Ready Assets: Includes 1 "Social Media Edit" (short-form vertical video with music/titles).</li>
+            </ul>
+            <a
+              href="/booking.html?package=premium"
+              class="inline-block border border-accent px-6 py-2.5 text-xs uppercase tracking-widest hover:bg-accent hover:text-dark transition-colors"
+              >Get Started</a
+            >
+          </div>
+          <div
+            class="p-6 border border-border/80 rounded-md hover:border-accent/80 transition-colors text-center relative"
+            data-tier="elite"
+          >
+            <h3 class="font-display text-xl md:text-2xl font-light mb-4 text-accent">
+              Elite 10 Bundle
+            </h3>
+            <p class="text-xl font-semibold text-white mb-5 price-container">
+              <span class="current-price" data-original-price="100000">LKR 100,000</span> <span class="text-xs text-grey">/10 stones</span>
+              <del class="original-price hidden ml-2 text-grey text-xl"></del>
+            </p>
+            <span class="discount-badge hidden absolute top-4 right-4 bg-accent text-dark px-3 py-1 text-xs font-medium rounded">Save 0%</span>
+            <ul class="space-y-3 text-sm text-grey/90 leading-relaxed mb-6 text-left">
+  <li>10 Complete Pro Media Suites including 4K 360° videos and stacked images.</li>
+  <li>FREE Session Fee (LKR 20,000 Value) – We bring the entire macro studio to you.</li>
+  <li>Express 48-Hour Delivery with priority post-processing for all 10 stones.</li>
+  <li>On-site live review to confirm every facet and angle meets your standards.</li>
+  <li>White-glove service operating within your secure office or vault environment.</li>
+</ul>
+            <a
+              href="/booking.html?package=elite"
+              class="inline-block border border-accent px-6 py-2.5 text-xs uppercase tracking-widest hover:bg-accent hover:text-dark transition-colors"
+              >Get Started</a
+            >
+          </div>
+        </div>
+        <div class="text-center mt-10 max-w-2xl mx-auto text-sm text-grey/90 leading-relaxed">
+          <p><strong class="text-grey-light font-medium">Session Fee (Call-out Fee):</strong> LKR 20,000 (Fixed per session). We bring the entire macro studio to your office or vault. Live Review & Security ensured.</p>
+          <p class="mt-4">Note: For stones valued at over LKR 1,000,000, please call for a custom bespoke quote.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-20 md:py-28 lg:py-32 bg-dark">
+      <div class="container mx-auto px-6 lg:px-12">
+        <div class="text-center mb-12 md:mb-20">
+      <p class="section-eyebrow text-grey mb-5 md:mb-6">
         THE METHODOLOGY
       </p>
-      <h2 class="font-display text-3xl md:text-5xl font-light text-white leading-tight">
+      <h2 class="font-display text-2xl md:text-4xl font-light tracking-tight text-white leading-tight">
         Precision Engineering <br class="hidden md:block" /> & Digital Artistry
       </h2>
-      <p class="mt-6 text-grey max-w-2xl mx-auto text-base md:text-lg">
+      <p class="mt-5 text-grey/90 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
         We combine world-class macro optics with advanced cloud architecture to transform your physical inventory into elite digital assets.
       </p>
     </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
           <div>
   <h3 class="font-display text-xl font-light mb-6 text-accent">
     Professional Gear
   </h3>
-  <ul class="space-y-4 text-grey">
+  <ul class="space-y-3.5 text-sm text-grey leading-relaxed">
           <li>
             <strong class="text-white">Camera:</strong> 
             Ultra-high resolution full-frame sensors used to capture extreme clarity and microscopic gem detail.
@@ -383,7 +462,7 @@
   <h3 class="font-display text-xl font-light mb-6 text-accent">
     Digital Workflow
   </h3>
-  <ul class="space-y-4 text-grey">
+  <ul class="space-y-3.5 text-sm text-grey leading-relaxed">
     <li><strong class="text-white">Mastering:</strong> Professional retouching and color-correction for true-to-life brilliance.</li>
     <li><strong class="text-white">Web Design:</strong> Custom-built digital galleries designed to load instantly on any mobile device.</li>
     <li><strong class="text-white">Hosting:</strong> High-speed global delivery so your clients can view your stock from anywhere.</li>
@@ -395,135 +474,11 @@
       </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="py-32 md:py-40 bg-dark-light/50">
-      <div class="container mx-auto px-6 lg:px-12">
-        <div class="text-center mb-16 md:mb-24">
-          <p class="text-sm tracking-wide text-grey uppercase mb-6">
-            OUR PLANS
-          </p>
-          <h2 class="font-display text-3xl md:text-5xl font-light text-white">
-            Pricing
-          </h2>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
-          <div
-            class="p-8 border border-border rounded-lg hover:border-accent transition-colors text-center relative"
-            data-tier="basic"
-          >
-            <h3 class="font-display text-3xl font-light mb-4 text-accent">
-              Basic Suite
-            </h3>
-            <p class="text-2xl font-bold text-white mb-6 price-container">
-              <span class="current-price" data-original-price="5000">LKR 5,000</span> <span class="text-sm text-grey">/stone</span>
-              <del class="original-price hidden ml-2 text-grey text-2xl"></del>
-            </p>
-            <span class="discount-badge hidden absolute top-4 right-4 bg-accent text-dark px-3 py-1 text-xs font-medium rounded">Save 0%</span>
-            <ul class="space-y-3 text-grey mb-8 text-left">
-              <li>4 x Focus-Stacked Images of your gem stone: Multi-angle "Hero" shots (Table, Pavilion, Side).</li>
-              <li>1 x Tweezer Macro Video: 4K manual rotation to show "life" and fire.</li>
-              <li>Standard Post-Processing: Professional color grading and dust removal.</li>
-              <li>Browser-Ready Delivery: Optimized files for instant WhatsApp sending and fast web loading.</li>
-              <li>Technical Edge: Captured with Nikon Z6ii + Nikkor Z 105mm Macro.</li>
-            </ul>
-            <a
-              href="/booking.html?package=basic"
-              class="inline-block border border-accent px-8 py-3 hover:bg-accent hover:text-dark transition-colors"
-              >Get Started</a
-            >
-          </div>
-          <div
-            class="p-8 border border-accent rounded-lg bg-dark-light hover:border-accent transition-colors text-center relative"
-            data-tier="pro"
-          >
-            <div class="mb-6 text-center">
-  <h3 class="font-display text-3xl font-light text-accent">
-    Pro Suite
-  </h3>
-  <span class="inline-block mt-2 px-4 py-1 text-xs font-medium text-cyan-300 bg-cyan-500/20 border border-cyan-500/40 rounded-full">
-    Most Popular
-  </span>
-</div>
-            <p class="text-2xl font-bold text-white mb-6 price-container">
-              <span class="current-price" data-original-price="10000">LKR 10,000</span> <span class="text-sm text-grey">/stone</span>
-              <del class="original-price hidden ml-2 text-grey text-2xl"></del>
-            </p>
-            <span class="discount-badge hidden absolute top-4 right-4 bg-accent text-dark px-3 py-1 text-xs font-medium rounded">Save 0%</span>
-            <ul class="space-y-3 text-grey mb-8 text-left">
-              <li>Includes Everything in the Basic Suite +</li>
-              <li>1 x 4K 360° Turntable Video: A perfectly centered, motorized rotation showing edge-to-edge brilliance and symmetry.</li>
-              <li>Enhanced Retouching: Micro-level pixel cleaning for a flawless digital presence.</li>
-              <li>Designer Branding: High-fidelity watermark/logo placement.</li>
-            </ul>
-            <a
-              href="/booking.html?package=pro"
-              class="inline-block border border-accent px-8 py-3 bg-accent text-dark hover:bg-transparent hover:text-accent transition-colors"
-              >Get Started</a
-            >
-          </div>
-          <div
-            class="p-8 border border-border rounded-lg hover:border-accent transition-colors text-center relative"
-            data-tier="premium"
-          >
-            <h3 class="font-display text-3xl font-light mb-4 text-accent">
-              Premium Suite
-            </h3>
-            <p class="text-2xl font-bold text-white mb-6 price-container">
-              <span class="current-price" data-original-price="20000">LKR 20,000</span> <span class="text-sm text-grey">/stone</span>
-              <del class="original-price hidden ml-2 text-grey text-2xl"></del>
-            </p>
-            <span class="discount-badge hidden absolute top-4 right-4 bg-accent text-dark px-3 py-1 text-xs font-medium rounded">Save 0%</span>
-            <ul class="space-y-3 text-grey mb-8 text-left">
-              <li>Includes Everything in the Pro Suite +</li>
-              <li>Deep-Stack Engineering: Extra-deep focus stacking for absolute edge-to-edge clarity on complex cuts.</li>
-              <li>Elite Color Matching: Rigorous calibration to match the exact hue and saturation required for international certification standards.</li>
-              <li>Priority Post-Production: Advanced masking and lighting adjustments to highlight internal characteristics.</li>
-              <li>Marketing-Ready Assets: Includes 1 "Social Media Edit" (short-form vertical video with music/titles).</li>
-            </ul>
-            <a
-              href="/booking.html?package=premium"
-              class="inline-block border border-accent px-8 py-3 hover:bg-accent hover:text-dark transition-colors"
-              >Get Started</a
-            >
-          </div>
-          <div
-            class="p-8 border border-border rounded-lg hover:border-accent transition-colors text-center relative"
-            data-tier="elite"
-          >
-            <h3 class="font-display text-3xl font-light mb-4 text-accent">
-              Elite 10 Bundle
-            </h3>
-            <p class="text-2xl font-bold text-white mb-6 price-container">
-              <span class="current-price" data-original-price="100000">LKR 100,000</span> <span class="text-sm text-grey">/10 stones</span>
-              <del class="original-price hidden ml-2 text-grey text-2xl"></del>
-            </p>
-            <span class="discount-badge hidden absolute top-4 right-4 bg-accent text-dark px-3 py-1 text-xs font-medium rounded">Save 0%</span>
-            <ul class="space-y-3 text-grey mb-8 text-left">
-  <li>10 Complete Pro Media Suites including 4K 360° videos and stacked images.</li>
-  <li>FREE Session Fee (LKR 20,000 Value) – We bring the entire macro studio to you.</li>
-  <li>Express 48-Hour Delivery with priority post-processing for all 10 stones.</li>
-  <li>On-site live review to confirm every facet and angle meets your standards.</li>
-  <li>White-glove service operating within your secure office or vault environment.</li>
-</ul>
-            <a
-              href="/booking.html?package=elite"
-              class="inline-block border border-accent px-8 py-3 hover:bg-accent hover:text-dark transition-colors"
-              >Get Started</a
-            >
-          </div>
-        </div>
-        <div class="text-center mt-12 text-grey">
-          <p><strong>Session Fee (Call-out Fee):</strong> LKR 20,000 (Fixed per session). We bring the entire macro studio to your office or vault. Live Review & Security ensured.</p> <br><p></p> Note: For stones valued at over LKR 1,000,000, please call for a custom bespoke quote.</p>
-        </div>
-      </div>
-    </section>
-
     <!-- Booking Section -->
-    <!-- <section id="booking" class="py-32 md:py-40 bg-dark">
+    <!-- <section id="booking" class="py-20 md:py-28 lg:py-32 bg-dark">
       <div class="container mx-auto px-6 lg:px-12 text-center">
         <h2
-          class="font-display text-3xl md:text-5xl font-light text-white mb-12"
+          class="font-display text-2xl md:text-4xl font-light tracking-tight text-white mb-12"
         >
           Book Your Session
         </h2>
@@ -581,7 +536,7 @@
             class="w-full bg-dark-light border border-border px-6 py-3 text-sm text-grey-light h-32"
           ></textarea>
           <div class="text-left">
-            <h3 class="font-display text-xl font-light mb-4 text-accent">Shoot Preparation Checklist</h3>
+            <h3 class="font-display text-lg font-light mb-3 text-accent">Shoot Preparation Checklist</h3>
             <p class="text-grey mb-4">Please confirm you've prepared the following for the best results:</p>
             <ul class="space-y-2 text-grey">
               <li class="flex items-center">
@@ -617,9 +572,9 @@
     </section> -->
 
     <!-- Contact Section -->
-<section id="contact" class="py-32 md:py-40 bg-dark">
+<section id="contact" class="py-20 md:py-28 lg:py-32 bg-dark">
   <div class="container mx-auto px-6 lg:px-12 text-center">
-    <h2 class="font-display text-3xl md:text-5xl font-light text-white mb-12">
+    <h2 class="font-display text-2xl md:text-4xl font-light tracking-tight text-white mb-8">
       Get in Touch
     </h2>
 
@@ -643,7 +598,7 @@
         name="name"
         placeholder="Your Name"
         required
-        class="w-full bg-dark-light border border-border px-6 py-4 text-base text-grey-light focus:border-accent outline-none transition-colors rounded"
+        class="w-full bg-dark-light border border-border px-5 py-3.5 text-sm text-grey-light focus:border-accent outline-none transition-colors rounded"
       />
 
       <input
@@ -651,7 +606,7 @@
         name="email"
         placeholder="Your Email"
         required
-        class="w-full bg-dark-light border border-border px-6 py-4 text-base text-grey-light focus:border-accent outline-none transition-colors rounded"
+        class="w-full bg-dark-light border border-border px-5 py-3.5 text-sm text-grey-light focus:border-accent outline-none transition-colors rounded"
       />
 
       <input
@@ -659,7 +614,7 @@
         name="whatsapp"
         placeholder="WhatsApp Number (with country code)"
         required
-        class="w-full bg-dark-light border border-border px-6 py-4 text-base text-grey-light focus:border-accent outline-none transition-colors rounded"
+        class="w-full bg-dark-light border border-border px-5 py-3.5 text-sm text-grey-light focus:border-accent outline-none transition-colors rounded"
       />
 
       <textarea
@@ -667,12 +622,12 @@
         placeholder="Your Message"
         required
         rows="6"
-        class="w-full bg-dark-light border border-border px-6 py-4 text-base text-grey-light focus:border-accent outline-none transition-colors rounded resize-none"
+        class="w-full bg-dark-light border border-border px-5 py-3.5 text-sm text-grey-light focus:border-accent outline-none transition-colors rounded resize-none"
       ></textarea>
 
       <button
         type="submit"
-        class="w-full md:w-auto inline-block border-2 border-accent px-12 py-5 text-base tracking-wide hover:bg-accent hover:text-dark transition-all duration-500 font-medium rounded"
+        class="w-full md:w-auto inline-block border border-accent px-10 py-3.5 text-sm uppercase tracking-widest hover:bg-accent hover:text-dark transition-all duration-300 font-medium rounded"
       >
         Send Message
       </button>
@@ -680,20 +635,20 @@
   </div>
 </section>
 
-  <footer class="bg-dark-light text-grey py-20 md:py-32 border-t border-border">
+  <footer class="bg-dark-light text-grey py-14 md:py-20 border-t border-border/80">
   <div class="container mx-auto px-6 lg:px-12">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-y-12 md:gap-x-12 lg:gap-x-24">
 
       <div class="flex flex-col">
         <a 
           href="/" 
-          class="inline-flex items-baseline gap-2 text-2xl md:text-3xl tracking-widest mb-6"
+          class="inline-flex items-baseline gap-2 text-lg md:text-xl tracking-[0.18em] mb-5"
         >
           <span class="font-mont font-bold text-white">GEMSHOTS</span>
           <span class="font-mont font-light text-accent">PRO</span>
         </a>
 
-        <p class="text-sm leading-relaxed max-w-xs">
+        <p class="text-xs leading-relaxed max-w-xs text-grey/90">
           Directed by 
           <a 
             href="https://www.instagram.com/designbyching/" 
@@ -712,10 +667,10 @@
       </div>
 
       <div class="md:pl-4">
-        <h4 class="font-display text-lg font-light mb-6 tracking-wide text-accent">
+        <h4 class="section-eyebrow text-accent mb-4">
           LINKS
         </h4>
-        <ul class="space-y-4 text-sm">
+        <ul class="space-y-2.5 text-xs">
           <li><a href="/#services" class="hover:text-accent transition-colors">Services</a></li>
           <li><a href="/#portfolio" class="hover:text-accent transition-colors">Portfolio</a></li>
           <li><a href="/#process" class="hover:text-accent transition-colors">Process</a></li>
@@ -726,10 +681,10 @@
       </div>
 
       <div>
-        <h4 class="font-display text-lg font-light mb-6 tracking-wide text-accent">
+        <h4 class="section-eyebrow text-accent mb-4">
           CONTACT
         </h4>
-        <div class="space-y-4 text-sm leading-relaxed">
+        <div class="space-y-3 text-xs leading-relaxed">
           <p>
             <span class="block text-xs uppercase text-grey-dark mb-1">WhatsApp</span>
             <a href="https://wa.me/61477726885" class="text-white hover:text-accent transition-colors">
@@ -747,7 +702,7 @@
 
     </div>
 
-    <div class="mt-20 pt-10 border-t border-border/50 text-center text-xs text-grey-dark">
+    <div class="mt-12 pt-8 border-t border-border/40 text-center text-[11px] text-grey-dark tracking-wide">
       © 2026 GemShots Pro. All rights reserved.
     </div>
   </div>
@@ -756,7 +711,7 @@
     <!-- Gem Card Template - WHOLE CARD IS NOW CLICKABLE -->
     <template id="gem-card-template">
       <div
-        class="group flex flex-col h-full text-sm hover:-translate-y-1 transition duration-300 bg-dark-light rounded-lg overflow-hidden shadow-lg border border-border hover:border-accent cursor-pointer"
+        class="group flex flex-col h-full text-xs hover:-translate-y-0.5 transition duration-300 bg-dark-light/90 rounded-md overflow-hidden border border-border/70 hover:border-accent/60 cursor-pointer"
       >
         <a
           href="#"
@@ -775,18 +730,18 @@
               SOLD
             </div>
           </div>
-          <div class="p-6 flex flex-col space-y-2 flex-grow">
+          <div class="p-5 flex flex-col space-y-1.5 flex-grow">
             <p
-              class="text-xs tracking-wide text-grey uppercase font-medium text-center category"
+              class="text-[10px] tracking-[0.2em] text-grey uppercase font-medium text-center category"
             ></p>
             <h3
-              class="font-sans text-lg font-medium leading-tight group-hover:text-accent transition-colors text-white text-center name"
+              class="font-sans text-base font-medium leading-snug group-hover:text-accent transition-colors text-white text-center name"
             ></h3>
             <div class="flex items-center justify-center mt-auto">
-              <p class="text-sm text-grey text-center specs"></p>
+              <p class="text-xs text-grey/90 text-center specs"></p>
             </div>
             <span
-              class="block text-center text-sm font-medium text-grey group-hover:text-accent transition-colors mt-4"
+              class="block text-center text-[11px] uppercase tracking-widest text-grey group-hover:text-accent transition-colors mt-3"
             >
               View More →
             </span>
@@ -801,7 +756,7 @@
         <!-- Left column: Image + thumbnails -->
         <div class="space-y-6 lg:space-y-8">
           <div
-            class="aspect-[4/5] lg:aspect-[3/4] overflow-hidden bg-dark-light border border-border rounded-lg"
+            class="aspect-[4/5] lg:aspect-[3/4] overflow-hidden bg-dark-light border border-border/70 rounded-md"
           >
             <img
               id="main-media"
@@ -823,13 +778,13 @@
           class="flex flex-col justify-start space-y-6 lg:space-y-8 pt-2 lg:pt-0"
         >
           <p
-            class="text-xs tracking-wide text-grey uppercase font-medium category"
+            class="section-eyebrow text-grey category"
           ></p>
           <h1
-            class="font-display text-3xl sm:text-4xl lg:text-5xl font-light name text-white"
+            class="font-display text-2xl sm:text-3xl lg:text-4xl font-light tracking-tight name text-white"
           ></h1>
           <p
-            class="sold-note hidden text-base font-medium text-grey uppercase tracking-wide"
+            class="sold-note hidden text-xs font-medium text-grey uppercase tracking-widest"
           >
             SOLD
           </p>
@@ -839,16 +794,16 @@
           </p> -->
 
           <p
-            class="text-base sm:text-lg leading-relaxed text-grey description"
+            class="text-sm sm:text-base leading-relaxed text-grey/90 description"
           ></p>
           <hr class="border-border my-6" />
           <h2
-            class="font-display text-xl sm:text-2xl font-light uppercase tracking-wide text-accent"
+            class="font-display text-sm uppercase tracking-[0.2em] text-accent"
           >
             Specifications
           </h2>
           <div
-            class="grid grid-cols-2 gap-x-8 gap-y-4 text-sm sm:text-base text-grey"
+            class="grid grid-cols-2 gap-x-6 gap-y-3 text-xs sm:text-sm text-grey/90"
           >
             <div>
               <span class="font-medium">Carat:</span>
@@ -878,7 +833,7 @@
           <a
   id="inquire-link"
   href="/booking.html"
-  class="inline-block w-full border-2 border-accent px-8 py-4 sm:py-5 text-base sm:text-lg tracking-wide text-center hover:bg-accent hover:text-dark transition-all duration-300 font-medium text-accent"
+  class="inline-block w-full border border-accent px-6 py-3.5 text-xs uppercase tracking-[0.18em] text-center text-accent hover:bg-accent hover:text-dark transition-all duration-300"
 >
   Book Similar Professional Shots
 </a>
