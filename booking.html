@@ -69,20 +69,16 @@
           </nav>
 
           <button
+            type="button"
             id="hamburger"
-            class="md:hidden flex flex-col justify-between w-6 h-5"
-            aria-label="Toggle menu"
+            class="nav-toggle md:hidden text-grey-light hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0a] rounded-sm"
+            aria-label="Open menu"
+            aria-controls="mobile-menu"
             aria-expanded="false"
           >
-            <span
-              class="block w-full h-[2px] bg-grey-light rounded-full transition-all duration-300"
-            ></span>
-            <span
-              class="block w-full h-[2px] bg-grey-light rounded-full transition-all duration-300"
-            ></span>
-            <span
-              class="block w-full h-[2px] bg-grey-light rounded-full transition-all duration-300"
-            ></span>
+            <span class="nav-toggle-bar nav-toggle-bar--top" aria-hidden="true"></span>
+            <span class="nav-toggle-bar nav-toggle-bar--mid" aria-hidden="true"></span>
+            <span class="nav-toggle-bar nav-toggle-bar--btm" aria-hidden="true"></span>
           </button>
         </div>
       </div>
@@ -426,15 +422,21 @@
 
       hamburger.addEventListener("click", () => {
         const isOpen = hamburger.getAttribute("aria-expanded") === "true";
-        hamburger.setAttribute("aria-expanded", (!isOpen).toString());
+        const nextOpen = !isOpen;
+        hamburger.setAttribute("aria-expanded", nextOpen.toString());
+        hamburger.setAttribute(
+          "aria-label",
+          nextOpen ? "Close menu" : "Open menu"
+        );
         mobileMenu.classList.toggle("translate-x-full");
         mobileMenu.classList.toggle("translate-x-0");
-        body.classList.toggle("menu-open", !isOpen);
+        body.classList.toggle("menu-open", nextOpen);
       });
 
       mobileMenu.querySelectorAll("a").forEach((link) => {
         link.addEventListener("click", () => {
           hamburger.setAttribute("aria-expanded", "false");
+          hamburger.setAttribute("aria-label", "Open menu");
           mobileMenu.classList.add("translate-x-full");
           mobileMenu.classList.remove("translate-x-0");
           body.classList.remove("menu-open");
@@ -444,6 +446,7 @@
       document.addEventListener("click", (e) => {
         if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
           hamburger.setAttribute("aria-expanded", "false");
+          hamburger.setAttribute("aria-label", "Open menu");
           mobileMenu.classList.add("translate-x-full");
           mobileMenu.classList.remove("translate-x-0");
           body.classList.remove("menu-open");

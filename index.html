@@ -47,16 +47,18 @@
             <a href="#contact" class="text-xs uppercase tracking-widest text-grey-light hover:text-accent transition-colors">Contact</a>
           </nav>
 
-          <!-- Hamburger Button -->
+          <!-- Hamburger / close -->
           <button
+            type="button"
             id="hamburger"
-            class="md:hidden flex flex-col justify-between w-6 h-5"
-            aria-label="Toggle menu"
+            class="nav-toggle md:hidden text-grey-light hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-accent/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0a] rounded-sm"
+            aria-label="Open menu"
+            aria-controls="mobile-menu"
             aria-expanded="false"
           >
-            <span class="block w-full h-[2px] bg-grey-light rounded-full transition-all duration-300"></span>
-            <span class="block w-full h-[2px] bg-grey-light rounded-full transition-all duration-300"></span>
-            <span class="block w-full h-[2px] bg-grey-light rounded-full transition-all duration-300"></span>
+            <span class="nav-toggle-bar nav-toggle-bar--top" aria-hidden="true"></span>
+            <span class="nav-toggle-bar nav-toggle-bar--mid" aria-hidden="true"></span>
+            <span class="nav-toggle-bar nav-toggle-bar--btm" aria-hidden="true"></span>
           </button>
         </div>
       </div>

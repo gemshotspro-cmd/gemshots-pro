@@ -246,15 +246,18 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   hamburger.addEventListener("click", () => {
     const isOpen = hamburger.getAttribute("aria-expanded") === "true";
-    hamburger.setAttribute("aria-expanded", (!isOpen).toString());
+    const nextOpen = !isOpen;
+    hamburger.setAttribute("aria-expanded", nextOpen.toString());
+    hamburger.setAttribute("aria-label", nextOpen ? "Close menu" : "Open menu");
     mobileMenu.classList.toggle("translate-x-full");
     mobileMenu.classList.toggle("translate-x-0");
-    body.classList.toggle("menu-open", !isOpen);
+    body.classList.toggle("menu-open", nextOpen);
   });
 
   mobileMenu.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       hamburger.setAttribute("aria-expanded", "false");
+      hamburger.setAttribute("aria-label", "Open menu");
       mobileMenu.classList.add("translate-x-full");
       mobileMenu.classList.remove("translate-x-0");
       body.classList.remove("menu-open");
@@ -264,6 +267,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.addEventListener("click", (e) => {
     if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
       hamburger.setAttribute("aria-expanded", "false");
+      hamburger.setAttribute("aria-label", "Open menu");
       mobileMenu.classList.add("translate-x-full");
       mobileMenu.classList.remove("translate-x-0");
       body.classList.remove("menu-open");
